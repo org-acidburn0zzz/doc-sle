@@ -45,20 +45,29 @@ An important component of the OBS is also the *OBS Container Registry*. The link
 provides a detailed listing of all container images built by the OBS complete with command line code to pull the images into your local docker environment.
 The OBS {opensuse} link:https://build.opensuse.org/image_templates[container image templates] can be modified to specific needs and are the easiest way to create your own container branch.
 Container images can either be built with *native Docker tools* - based on an existing image using a Dockerfile.
-Or they can be built from scratch using the *KIWI NG imaging solution*.
+Or they can be built from scratch using the *{kiwi} imaging solution*.
 
 TODO::
   * should this contain specific instructions on how to build containers or is linking to https://openbuildservice.org/2018/05/09/container-building-and-distribution/ enough?
 
-=== KIWI
+=== {kiwi}
 
-KIWI NG is an imaging solution that is based on an image XML description. Such a description is represented by a directory which
+*KIWI Next Generation* is a multi purpose imaging solution. Beside container images, classical installation ISOs and images for virtual machines {kiwi} can also build images that boot via PXE or Vagrant boxes.
+The basis is an image XML description. Such a description is represented by a directory which
 includes at least one `config.xml` or `.kiwi` file and may as well include other files like scripts or configuration data.
+The image creation process with {kiwi} is automated and does not require any user interaction.
+Any information required for the image creation process is provided by the primary configuration file: `config.xml`.
+In addition, the image can optionally be customized using the `config.sh` and `images.sh` scripts.
 
-For specific information on how to install KIWI and use it to build images, see the link:http://osinside.github.io/kiwi/[KIWI documentation].
+[NOTE]
+====
+It is important to distinguish between KIWI NG (currently version 9.20.9) and it's unmaintained legacy versions (7.x.x or older), now called link:https://doc.opensuse.org/projects/kiwi/doc/[KIWI Legacy].
+====
+
+For specific information on how to install {kiwi} and use it to build images, see the link:http://osinside.github.io/kiwi/[KIWI documentation].
 A collection of example image descriptions can be found on the link:https://github.com/OSInside/kiwi-descriptions[KIWI GitHub repository].
 
-You can also find out more about KIWI through it's man pages by installing the `kiwi-man-pages` package and running the `man kiwi` command.
+You can also find out more about {kiwi} through it's man pages by installing the `kiwi-man-pages` package and running the `man kiwi` command.
 
 
 === Building Official {slea} Images

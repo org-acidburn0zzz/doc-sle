@@ -26,7 +26,7 @@ Applications
 :jeos: JeOS Just enough OS
 :kdump: Kdump
 :kexec: Kexec
-:kiwi: KIWI
+:kiwi: KIWI NG
 :kprobes: Kprobes
 :kube: Kubernetes
 :mariadb: Maria DB
