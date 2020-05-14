@@ -6,7 +6,9 @@ Most of the tools mentioned below are part of the *{sls} 15 SP2 Containers Modul
 You can see the full list of packages in the *Containers Module* in the {suse}
 link:https://scc.suse.com/packages?name=SUSE%20Linux%20Enterprise%20Server&version=15.2&arch=x86_64&query=&module=1963[Customer Center].
 
-=== Docker
+=== Build Tools Available to Customers
+
+==== Docker
 
 Docker is many part system for creating and managing containers, it's main part being the *Docker Open Source Engine* -
 a lightweight virtualization solution to run containers simultaneously on a single control host.
@@ -15,7 +17,7 @@ and can also contain some metadata describing how to run the container.
 Most Dockerfiles start from a parent image.
 For an introduction on how to create custom base {sle} docker images see link:https://documentation.suse.com/sles/15-SP1/single-html/SLES-dockerquick/[the Docker Open Source Engine Guide].
 
-=== Podman
+==== Podman
 
 Podman is short for *Pod Manager tool* and it's purpose extends beyond just building images.
 It is a *daemonless* container engine for developing, managing, and running OCI containers on your Linux System.
@@ -27,8 +29,7 @@ By using user namespaces, which provide an isolation mechanism for Linux process
 
 For instructions on how to install and use Podman see link:https://podman.io/[the Podman Documentation].
 
-
-=== Buildah
+==== Buildah
 
 Buildah facilitates building *Open Containers Initiative* (OCI) container images.
 It is a complimentary tool to Podman, in fact `podman build` uses Buildah to perform container image builds.
@@ -38,7 +39,9 @@ OCI images built using the *Buildah command line tool* (CLI) and the underlying 
 
 For instructions on how to install and use Buildah see link:https://buildah.io/[the Buildah Documentation] and link:https://github.com/containers/buildah/blob/master/docs/tutorials[tutorials].
 
-=== Open Build Service
+=== SUSE-Internal Build Tools
+
+==== Open Build Service
 
 The *Open Build Service* (OBS) provides free infrastructure for building and storing RPM packages including various container formats.
 An important component of the OBS is also the *OBS Container Registry*. The link:https://registry.opensuse.org/cgi-bin/cooverview[OBS Container Registry]
@@ -74,5 +77,4 @@ You can also find out more about {kiwi} through it's man pages by installing the
 
 Only images built via the Internal Build Service, *build.suse.de*, can be official.
 
-There are no official SLE base container images on https://build.opensuse.org and the RPMs exported there are also not identical to the internal ones.
-This means that it is impossible to build officially supported images on https://build.opensuse.org.
+There are no official SLE container images on https://build.opensuse.org and the RPMs exported there are also not identical to the internal ones. This means that it is impossible to build officially supported images on https://build.opensuse.org.

@@ -4,31 +4,22 @@
 This chapter is about how and where to get ready built container images.
 
 
-=== {sle} Base images
+=== {sle} Base Images
 
-What are they?
-
-Where to get them?
-Which images are are available?
-What to do with them?
-
+{suse} offers a large number of official base container images, which users can use to build containers with. Each base image {slea} contains the {slea} OS of a particular {slea} release minus the kernel. Base images are available through the {suse} Registry under `registry.suse.com`. For details about {suse} Registry see <<_suse_registry>>. The images you can find in the {suse} Registry are all Generally Available (Production) and link:https://www.suse.com/products/long-term-service-pack-support/[Long Term Service Pack Support] releases of SLES 12 and SLES 15. The available images are all compressed to a minimal size of 40MB. {sle} base images in {suse} Registry are also fully supported, which means they get regularly updated with security fixes and the {suse} support plans apply. For more information about the support plans see <<_supportability>>.
 
 === {suse} Container Properties
 
+[[_suse_registry]]
 === {suse} Registry
 
-`registry.suse.com` is a kind of storage, from which you can pull official tested and updated SLE and SLES base container images.
-It's free for everyone to use, but much more useful without an active customer subscription on the container host.
+The official {suse} Registry can be found under `registry.suse.com`. It is the only place from which to pull official tested and updated SLE and SLES base container images. All images in the {suse} Registry undergo a fixed maintenance process, they are regularly updated and security fixes applied.
+{suse} Registry free for everyone to use, but much more useful with an active customer subscription on the container host.
 That is because the subscription is used by the container and it is needed for the container images to get updates.
-The {suse} Registry as of now does not have a UI or a list of images, but the UI is in plan.
-There is also no complete list of images, but all available images are listed in the examples in the
-link::https://documentation.suse.com/sles/15-SP1/single-html/SLES-dockerquick/#Building-Pre-build-Images[Docker Quickstart Guide],
+The {suse} Registry as of now does not have a UI or a list of images, but all available images are listed in the examples in the
+link:https://documentation.suse.com/sles/15-SP1/single-html/SLES-dockerquick/#Building-Pre-build-Images[Docker Quickstart Guide],
 which is also where you will find a description of how the image names are derived.
 
-
-The SCC team is responsible for maintaining the registry and for the web UI.
-TODO::
-  * figure out who to ask in SCC
 
 === Comparing Containers
 
@@ -52,6 +43,6 @@ For instructions on how to install it,
 see the link:https://github.com/GoogleContainerTools/container-diff#installation[container-diff documentation].
 
 
-=== On-prem Registry
+=== On-premise Registry
 
-=== 3rd Party Container
+=== 3rd Party Containers
