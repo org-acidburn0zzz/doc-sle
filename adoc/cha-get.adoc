@@ -32,29 +32,14 @@ openSUSE Leap does it the same way, see also https://en.opensuse.org/Building_de
 
 ==== Labels
 
+Labels are another way to identify images. All {slea} container image labels begin with `com.suse.<product>.<containername>` after which follows a further specification. {opensuse} can be identified by a label that usually starts with `org.opencontainers`.
+
+With every new layer added to a base image, labels defined in the base container get overwritten by labels in the derived image. And because the base images are only the bare OS and any functionality added by the user leads to the creation of a new layer, the labels get overwritten very easily. In order to protect information about the origin of the image, the label `com.suse.sle.base` has been added to {slea} container images. This signifies that {suse} is the vendor of this image and this label must not be overwritten in derived images. For example the label `com.suse.sle.base.title` contains the image name "SUSE Linux Enterprise 15 Base Container", which is information that cannot be overwritten with any other layer of the image.
+However, the opposite is true for {opensuse} base images, where labels do get overwritten. For example `org.opencontainers.image.title` can get overwritten and will always contain the title of the latest added layer.
+
+Below follows a list of all labels currently defined:
 
 ////
-Here it is worth to mention how the double labels work:
-org.opencontainers.image.title
-com.suse.sle.base.title
-The SLES base container we publish is like an empty VM. It is an environment without any further functionality. A user will put his own workload into it, to make it functional.
-This mean he will use SUSEs base container and 'derive' it an create a new layer in the container that contains maybe a database or a webserver or any other application.
-When that happens this 'label org.opencontainers.image.title' will get overwritten . and the previous information is lost.
-or expressed differently org.opencontainers.image.title always contains the title of the latest added layer
-just with version updates
-
-org.opencontainers.image.title is also the standard field an OCI compatibla container should have.
-that's why we have introduced our own label and namespace: com.suse.sle.xyz
-so : com.suse.sle.base.title contains the image name, we a a vendor give, that must not be overwritten. So even when the container gets 'derived' our own container image title remains there and, in a support case, we know it was our container
-so everything under org.opencontainers.xyz is subject to be updated when the container is derived (gets a workload built in )
-everything at: com.suse.xzy must not be changed
-or, if another product from suse uses the SLE base container they will introduce their own e.g. title lable like:
-com.suse.caasp.title or what so ever
-(jsut for your understanding)
-
-One drawback of using Docker labels (which we need for compatibility) is that there is only one level of them in an image and not one per layer. This means that labels defined in the base container can be overwritten by labels in derived images. Those which aren't overwritten aren't shown as coming from the base container. To workaround that, specific information has to be cloned in container-specific labels, which are prefixed with "com.suse.<product>.<containername>".
-
-Here's the full list of labels/annotations defined currently:
 ✓	org.opencontainers.image.title com.suse.sle.base.title	org.opencontainers.image.title	Title of the image	SUSE Linux Enterprise 15 Base Container
 ✓	org.opencontainers.image.description com.suse.sle.base.description	org.opencontainers.image.description	Short description of the image	Image containing a minimal environment for containers based on SUSE Linux Enterprise 15.
 ✓	org.opencontainers.image.version com.suse.sle.base.version	org.opencontainers.image.version	Version of the image. <codestream>.<sp>.<cicnt>.<bldcnt>	15.0.4.2
