@@ -6,9 +6,68 @@ This chapter is about how and where to get ready built container images.
 
 === {sle} Base Images
 
-{suse} offers a large number of official base container images, which users can use to build containers with. Each base image {slea} contains the {slea} OS of a particular {slea} release minus the kernel. Base images are available through the {suse} Registry under `registry.suse.com`. For details about {suse} Registry see <<_suse_registry>>. The images you can find in the {suse} Registry are all Generally Available (Production) and link:https://www.suse.com/products/long-term-service-pack-support/[Long Term Service Pack Support] releases of SLES 12 and SLES 15. The available images are all compressed to a minimal size of 40MB. {sle} base images in {suse} Registry are also fully supported, which means they get regularly updated with security fixes and the {suse} support plans apply. For more information about the support plans see <<_supportability>>.
+{suse} offers a large number of official container base images, which users can use to build containers with. Each base image {slea} contains the {slea} OS of a particular {slea} release minus the kernel. The OS contained in the base image is an empty environment without any further functionality whatsoever. You, as a user, put your own workload into it, to make it functional.
+
+Base images are available through the {suse} Registry under `registry.suse.com`. For details about {suse} Registry see <<_suse_registry>>. The images you can find in the {suse} Registry are all Generally Available (Production) and link:https://www.suse.com/products/long-term-service-pack-support/[LTSS] releases of SLES 12 and SLES 15. The available images are all compressed to a minimal size of *40MB*. {sle} base images in {suse} Registry are also fully supported, which means they get regularly updated with security fixes and the {suse} support plans apply. For more information about the support plans see <<_supportability>>.
 
 === {suse} Container Properties
+
+{suse} container images have a number of properties, which can be useful to the user for identifying the right one.
+The individual properties listed below can be accessed after you have pulled a container image from the repository and run docker inspect on it.
+
+==== Repository names
+
+Repository names start with the name of the product, e.g. `suse/sle...`, `opensuse/tumbleweed`, `caasp/...` and etc.
+All {slea} 15 containers for all service packs are in the namespace `suse/sle15`.
+This strategy will also be applied to future versions of {slea}, e.g. `suse/sle16` and so on.
+For {slea} 12 however, there is a separate repository name for each service pack, e.g. `suse/sle12sp3`, `suse/sle12sp4`, `suse/sle12sp5`.
+
+////
+There are also certain restrictions on projects for publishing images. For every repository in the {suse} Registry (e.g. `suse/sle15` and `opensuse/tumbleweed`), there is exactly one project or repository combination on the Internal Build Service which provides the images to feed those.
+This means, you might run into this issue easily if it's required that foo/bar:12.3 is built against SLE 12 SP3, but foo/bar:15.0 against SLE 15, this is not possible with the current setup of CR projects.
+
+SLE deals with this issue by publish disabling SUSE:Containers:SLE-SERVER:15-SP? and using _aggregates to publish the images from the SUSE:Containers:SLE-SERVER:15 project.
+openSUSE Leap does it the same way, see also https://en.opensuse.org/Building_derived_containers#Release_mechanism.
+////
+
+==== Labels
+
+
+////
+Here it is worth to mention how the double labels work:
+org.opencontainers.image.title
+com.suse.sle.base.title
+The SLES base container we publish is like an empty VM. It is an environment without any further functionality. A user will put his own workload into it, to make it functional.
+This mean he will use SUSEs base container and 'derive' it an create a new layer in the container that contains maybe a database or a webserver or any other application.
+When that happens this 'label org.opencontainers.image.title' will get overwritten . and the previous information is lost.
+or expressed differently org.opencontainers.image.title always contains the title of the latest added layer
+just with version updates
+
+org.opencontainers.image.title is also the standard field an OCI compatibla container should have.
+that's why we have introduced our own label and namespace: com.suse.sle.xyz
+so : com.suse.sle.base.title contains the image name, we a a vendor give, that must not be overwritten. So even when the container gets 'derived' our own container image title remains there and, in a support case, we know it was our container
+so everything under org.opencontainers.xyz is subject to be updated when the container is derived (gets a workload built in )
+everything at: com.suse.xzy must not be changed
+or, if another product from suse uses the SLE base container they will introduce their own e.g. title lable like:
+com.suse.caasp.title or what so ever
+(jsut for your understanding)
+
+One drawback of using Docker labels (which we need for compatibility) is that there is only one level of them in an image and not one per layer. This means that labels defined in the base container can be overwritten by labels in derived images. Those which aren't overwritten aren't shown as coming from the base container. To workaround that, specific information has to be cloned in container-specific labels, which are prefixed with "com.suse.<product>.<containername>".
+
+Here's the full list of labels/annotations defined currently:
+✓	org.opencontainers.image.title com.suse.sle.base.title	org.opencontainers.image.title	Title of the image	SUSE Linux Enterprise 15 Base Container
+✓	org.opencontainers.image.description com.suse.sle.base.description	org.opencontainers.image.description	Short description of the image	Image containing a minimal environment for containers based on SUSE Linux Enterprise 15.
+✓	org.opencontainers.image.version com.suse.sle.base.version	org.opencontainers.image.version	Version of the image. <codestream>.<sp>.<cicnt>.<bldcnt>	15.0.4.2
+✓	org.opencontainers.image.created com.suse.sle.base.created	org.opencontainers.image.created	Date/time of image build	2018-07-27T14:12:30Z
+X	org.opencontainers.image.vendor com.suse.sle.base.vendor	org.opencontainers.image.vendor	Vendor of the image	SUSE LLC
+X	org.opencontainers.image.url com.suse.sle.base.url	org.opencontainers.image.url	URL with more information	https://www.suse.com/products/server/
+✓	org.openbuildservice.disturl com.suse.sle.base.disturl	org.openbuildservice.disturl	Dist URL as provided by OBS	obs://build.suse.de/SUSE:SLE-15:Update:CR/images/2951b67133dd6384cacb28203174e030-sles15-image
+✓	org.opensuse.reference com.suse.sle.base.reference	org.opensuse.reference	Reference pointing to this specific image. The image you get with docker pull <ref.name> must not change.	registry.suse.com/suse/sle15:4.2
+////
+
+==== Tags
+
+
 
 [[_suse_registry]]
 === {suse} Registry
@@ -21,6 +80,7 @@ link:https://documentation.suse.com/sles/15-SP1/single-html/SLES-dockerquick/#Bu
 which is also where you will find a description of how the image names are derived.
 
 
+[[_comparing_containers]]
 === Comparing Containers
 
 The link:https://github.com/GoogleContainerTools/container-diff#container-diff[container-diff]
@@ -44,5 +104,19 @@ see the link:https://github.com/GoogleContainerTools/container-diff#installation
 
 
 === On-premise Registry
+
+////
+http://port.us.org/
+https://documentation.suse.com/sles/12-SP4/html/SLES-all/cha-registry-installation.html#sec-docker-portus
+or
+https://documentation.suse.com/sles/15-SP1/single-html/SLES-dockerquick/#sec-docker-portus
+
+
+Portus is an open source authorization service and user interface for the next generation Docker Registry.
+
+It is an on-premise application that allows users to administrate and secure their Docker registries.
+
+As explained here one of the main jobs of Portus is being an authorization service for your Docker registry. The other main goal of Portus is to provide a useful and powerful UI on top of your registry. You can learn about all this here.
+////
 
 === 3rd Party Containers
