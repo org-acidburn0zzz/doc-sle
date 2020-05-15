@@ -6,18 +6,18 @@ This chapter is about how and where to get ready built container images.
 
 === {sle} Base Images
 
-{suse} offers a large number of official container base images, which users can use to build containers with. Each base image {slea} contains the {slea} OS of a particular {slea} release minus the kernel. The OS contained in the base image is an empty environment without any further functionality whatsoever. You, as a user, put your own workload into it, to make it functional.
+{suse} offers a large number of official container base images, which users can use to build containers with. Each base image {slea} contains the {slea} OS of a particular {slea} release minus the kernel. The OS contained in the base image is an empty environment without any further functionality. You, as a user, put your own workload into it, to make it functional.
 
 Base images are available through the {suse} Registry under `registry.suse.com`. For details about {suse} Registry see <<_suse_registry>>. The images you can find in the {suse} Registry are all Generally Available (Production) and link:https://www.suse.com/products/long-term-service-pack-support/[LTSS] releases of SLES 12 and SLES 15. The available images are all compressed to a minimal size of *40MB*. {sle} base images in {suse} Registry are also fully supported, which means they get regularly updated with security fixes and the {suse} support plans apply. For more information about the support plans see <<_supportability>>.
 
 === {suse} Container Properties
 
 {suse} container images have a number of properties, which can be useful to the user for identifying the right one.
-The individual properties listed below can be accessed after you have pulled a container image from the repository and run docker inspect on it.
+The individual properties listed below can be accessed after you have pulled a container image from the repository and run `docker inspect` on it.
 
 ==== Repository names
 
-Repository names start with the name of the product, e.g. `suse/sle...`, `opensuse/tumbleweed`, `caasp/...` and etc.
+Repository names start with the name of the product, e.g. `suse/sle/(...)`, `opensuse/tumbleweed/(...)`, `caasp/(...)` and etc.
 All {slea} 15 containers for all service packs are in the namespace `suse/sle15`.
 This strategy will also be applied to future versions of {slea}, e.g. `suse/sle16` and so on.
 For {slea} 12 however, there is a separate repository name for each service pack, e.g. `suse/sle12sp3`, `suse/sle12sp4`, `suse/sle12sp5`.
@@ -34,10 +34,16 @@ openSUSE Leap does it the same way, see also https://en.opensuse.org/Building_de
 
 Labels are another way to identify images. All {slea} container image labels begin with `com.suse.<product>.<containername>` after which follows a further specification. {opensuse} can be identified by a label that usually starts with `org.opencontainers`.
 
-With every new layer added to a base image, labels defined in the base container get overwritten by labels in the derived image. And because the base images are only the bare OS and any functionality added by the user leads to the creation of a new layer, the labels get overwritten very easily. In order to protect information about the origin of the image, the label `com.suse.sle.base` has been added to {slea} container images. This signifies that {suse} is the vendor of this image and this label must not be overwritten in derived images. For example the label `com.suse.sle.base.title` contains the image name "SUSE Linux Enterprise 15 Base Container", which is information that cannot be overwritten with any other layer of the image.
-However, the opposite is true for {opensuse} base images, where labels do get overwritten. For example `org.opencontainers.image.title` can get overwritten and will always contain the title of the latest added layer.
 
-Below follows a list of all labels currently defined:
+[IMPORTANT]
+.`com.suse.sle.base`
+====
+With every new layer added to a base image, labels defined in the base container get overwritten by labels in the derived image. And because the base images are only the bare OS and any functionality added by the user leads to the creation of a new layer, the labels get overwritten very easily. In order to protect information about the origin of the image, the label `com.suse.sle.base` has been added to {slea} container images. This signifies that {suse} is the vendor of this image and this label *must not be overwritten in derived images*. For example the label `com.suse.sle.base.title` contains the image name "SUSE Linux Enterprise 15 Base Container", which is information that cannot be overwritten with any other layer of the image.
+
+The opposite is true for {opensuse} base images, where labels do get overwritten. For example `org.opencontainers.image.title` can get overwritten and will always contain the title of the latest added layer.
+====
+
+A list of all labels currently defined follows:
 
 ////
 ✓	org.opencontainers.image.title com.suse.sle.base.title	org.opencontainers.image.title	Title of the image	SUSE Linux Enterprise 15 Base Container
