@@ -23,6 +23,7 @@ This strategy will also be applied to future versions of {slea}, e.g. `suse/sle1
 For {slea} 12 however, there is a separate repository name for each service pack, e.g. `suse/sle12sp3`, `suse/sle12sp4`, `suse/sle12sp5`.
 
 ////
+===== Restrictions on projects for publishing images
 There are also certain restrictions on projects for publishing images. For every repository in the {suse} Registry (e.g. `suse/sle15` and `opensuse/tumbleweed`), there is exactly one project or repository combination on the Internal Build Service which provides the images to feed those.
 This means, you might run into this issue easily if it's required that foo/bar:12.3 is built against SLE 12 SP3, but foo/bar:15.0 against SLE 15, this is not possible with the current setup of CR projects.
 
@@ -32,33 +33,38 @@ openSUSE Leap does it the same way, see also https://en.opensuse.org/Building_de
 
 ==== Labels
 
-Labels are another way to identify images. All {slea} container image labels begin with `com.suse.<product>.<containername>` after which follows a further specification. {opensuse} can be identified by a label that usually starts with `org.opencontainers`.
+Labels are another way to identify images. All {slea} container image labels begin with `com.suse.<product>.<containername>` after which follows a further specification. {opensuse} container images are identified by a label that begins with `org.opencontainers`.
 
 
 [IMPORTANT]
-.`com.suse.sle.base`
+.The `com.suse.sle.base` label is protected.
 ====
 With every new layer added to a base image, labels defined in the base container get overwritten by labels in the derived image. And because the base images are only the bare OS and any functionality added by the user leads to the creation of a new layer, the labels get overwritten very easily. In order to protect information about the origin of the image, the label `com.suse.sle.base` has been added to {slea} container images. This signifies that {suse} is the vendor of this image and this label *must not be overwritten in derived images*. For example the label `com.suse.sle.base.title` contains the image name "SUSE Linux Enterprise 15 Base Container", which is information that cannot be overwritten with any other layer of the image.
 
 The opposite is true for {opensuse} base images, where labels do get overwritten. For example `org.opencontainers.image.title` can get overwritten and will always contain the title of the latest added layer.
 ====
 
-A list of all labels currently defined follows:
+A list of all currently defined labels follows:
 
-////
-✓	org.opencontainers.image.title com.suse.sle.base.title	org.opencontainers.image.title	Title of the image	SUSE Linux Enterprise 15 Base Container
-✓	org.opencontainers.image.description com.suse.sle.base.description	org.opencontainers.image.description	Short description of the image	Image containing a minimal environment for containers based on SUSE Linux Enterprise 15.
-✓	org.opencontainers.image.version com.suse.sle.base.version	org.opencontainers.image.version	Version of the image. <codestream>.<sp>.<cicnt>.<bldcnt>	15.0.4.2
-✓	org.opencontainers.image.created com.suse.sle.base.created	org.opencontainers.image.created	Date/time of image build	2018-07-27T14:12:30Z
-X	org.opencontainers.image.vendor com.suse.sle.base.vendor	org.opencontainers.image.vendor	Vendor of the image	SUSE LLC
-X	org.opencontainers.image.url com.suse.sle.base.url	org.opencontainers.image.url	URL with more information	https://www.suse.com/products/server/
-✓	org.openbuildservice.disturl com.suse.sle.base.disturl	org.openbuildservice.disturl	Dist URL as provided by OBS	obs://build.suse.de/SUSE:SLE-15:Update:CR/images/2951b67133dd6384cacb28203174e030-sles15-image
-✓	org.opensuse.reference com.suse.sle.base.reference	org.opensuse.reference	Reference pointing to this specific image. The image you get with docker pull <ref.name> must not change.	registry.suse.com/suse/sle15:4.2
-////
+.Currently Defined Labels
+|===
+|Must be provided by derived images | Labels | OCI Annotation | Description | Example
+
+|✓	|org.opencontainers.image.*title* com.suse.sle.base.*title*	| org.opencontainers.image.title	| Title of the image	| SUSE Linux Enterprise 15 Base Container
+|✓	|org.opencontainers.image.*description* com.suse.sle.base.*description*	| org.opencontainers.image.description	| Short description of the image	| Image containing a minimal environment for containers based on SUSE Linux Enterprise 15.
+|✓	|org.opencontainers.image.*version* com.suse.sle.base.*version*	| org.opencontainers.image.version | Version of the image | <codestream>.<sp>.<cicnt>.<bldcnt>	15.0.4.2
+|✓	|org.opencontainers.image.*created* com.suse.sle.base.*created*	| org.opencontainers.image.created | Date/time of image build	| 2018-07-27T14:12:30Z
+|X	|org.opencontainers.image.*vendor* com.suse.sle.base.*vendor*	| org.opencontainers.image.vendor	| Vendor of the image	| SUSE LLC
+|X	|org.opencontainers.image.*url* com.suse.sle.base.*url*	| org.opencontainers.image.url	| URL with more information	| https://www.suse.com/products/server/
+|✓	|org.openbuildservice.*disturl* com.suse.sle.base.*disturl*	| org.openbuildservice.disturl	| Dist URL as provided by OBS	| obs://build.suse.de/SUSE:SLE-15:Update:CR/images/2951b67133dd6384cacb28203174e030-sles15-image
+|✓	|org.opensuse.*reference* com.suse.sle.base.*reference*	| org.opensuse.reference	| Reference pointing to this specific image. The image you get with docker pull <ref.name> must not change.	| registry.suse.com/suse/sle15:4.2
+|===
 
 ==== Tags
 
+Tags can be freely defined. During the release of a new build, the new builds are released into the target project (See Base Container Image Building) and the old images are kept. If a tag is provided by multiple images, the newest image is used.
 
+Which tags a container image provides is entirely up to the maintainer of the image, as this varies depending on the use case. Consider the restriction explained in "Restrictions on projects for publishing images" above.
 
 [[_suse_registry]]
 === {suse} Registry
