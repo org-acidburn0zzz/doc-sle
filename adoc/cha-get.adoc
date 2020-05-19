@@ -66,7 +66,7 @@ Tags can be freely defined. During the release of a new build, the new builds ar
 
 Which tags a container image provides is entirely up to the maintainer of the image, as this varies depending on the use case. Consider the restriction explained in "Restrictions on projects for publishing images" above.
 
-[[_suse_registry]]
+[[suse-registry]]
 === {suse} Registry
 
 The official {suse} Registry can be found under `registry.suse.com`. It is the only place from which to pull official tested and updated SLE and SLES base container images. All images in the {suse} Registry undergo a fixed maintenance process, they are regularly updated and security fixes applied.
@@ -77,7 +77,7 @@ link:https://documentation.suse.com/sles/15-SP1/single-html/SLES-dockerquick/#Bu
 which is also where you will find a description of how the image names are derived.
 
 
-[[_comparing_containers]]
+[[comparing-containers]]
 === Comparing Containers
 
 The link:https://github.com/GoogleContainerTools/container-diff#container-diff[container-diff]

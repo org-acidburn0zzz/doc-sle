@@ -1,5 +1,5 @@
 
-[[_supportability]]
+[[supportability]]
 == Supportability
 
 This chapter explains how {slsa} container support plans work.
