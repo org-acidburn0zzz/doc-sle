@@ -13,7 +13,7 @@ Base images are available through the {suse} Registry under `registry.suse.com`.
 === {suse} Container Properties
 
 {suse} container images have a number of properties, which can be useful to the user for identifying the right one.
-The individual properties listed below can be accessed after you have pulled a container image from the repository and run `docker inspect` on it.
+The individual properties listed below can be accessed after you have pulled a container image from the repository and run `podman inspect` on it.
 
 ==== Repository names
 
@@ -102,18 +102,13 @@ see the link:https://github.com/GoogleContainerTools/container-diff#installation
 
 === On-premise Registry
 
-////
-http://port.us.org/
-https://documentation.suse.com/sles/12-SP4/html/SLES-all/cha-registry-installation.html#sec-docker-portus
-or
-https://documentation.suse.com/sles/15-SP1/single-html/SLES-dockerquick/#sec-docker-portus
+==== Portus
 
+link:http://port.us.org/[Portus] is an on-premise application whose main purpose is to provide users with *authorization for their Docker registries*. The other main goal of Portus is to provide a *UI on top of your registry*. It supports LDAP user authentication and allows easy private registry management. For further notable features of Portus, see: http://port.us.org/features.html
 
-Portus is an open source authorization service and user interface for the next generation Docker Registry.
+Portus can be deployed using a standard Docker container, but also inside a Kubernetes cluster and even on Bare metal. For deployment options and instructions on how to get started with exploring Portus inside a development environment, see http://port.us.org/docs/deploy.html.
 
-It is an on-premise application that allows users to administrate and secure their Docker registries.
+For instructions on how to install Portus from the SUSE Container Registry see the link:https://documentation.suse.com/sles/12-SP4/html/SLES-all/cha-registry-installation.html#sec-docker-portus[{slsa} Documentation].
 
-As explained here one of the main jobs of Portus is being an authorization service for your Docker registry. The other main goal of Portus is to provide a useful and powerful UI on top of your registry. You can learn about all this here.
-////
 
 === 3rd Party Containers
