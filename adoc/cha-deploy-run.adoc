@@ -4,4 +4,16 @@
 
 === Container Orchestration
 
+==== Pod deployment with Podman
+
+Apart from being able to build images, Podman also has a container deployment engine, which can be used for easier pod deployment. This engine works with the concept of pods - a group of one or more containers that operate together. Pods can also be thought of as a way to group related containers together for easier management. Because Podman deploys each container as its own process, this can be a very efficient and easy way of creating interconnected containers.
+
+//==== Kubernetes
+
+//==== {caasp}
+
+
+
 === Monitoring, Patching & Updating
+
+//==== SUMA?

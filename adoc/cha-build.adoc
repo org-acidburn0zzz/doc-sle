@@ -17,6 +17,8 @@ and can also contain some metadata describing how to run the container.
 Most Dockerfiles start from a parent image.
 For an introduction on how to create custom base {sle} docker images see link:https://documentation.suse.com/sles/15-SP1/single-html/SLES-dockerquick/[the Docker Open Source Engine Guide].
 
+
+[[podman]]
 ==== Podman
 
 Podman is short for *Pod Manager tool* and it's purpose extends beyond just building images.
@@ -32,7 +34,7 @@ For instructions on how to install and use Podman see link:https://podman.io/[th
 ==== Buildah
 
 Buildah facilitates building *Open Containers Initiative* (OCI) container images.
-It is a complimentary tool to Podman, in fact `podman build` uses Buildah to perform container image builds.
+It is a complimentary tool to Podman (see<<podman>>), in fact `podman build` uses Buildah to perform container image builds.
 Images can be built from already existing images, from scratch, and using Dockerfiles.
 OCI images built using the *Buildah command line tool* (CLI) and the underlying OCI based technologies
 (e.g. containers/image and containers/storage) are portable and can therefore run in a Docker environment.
