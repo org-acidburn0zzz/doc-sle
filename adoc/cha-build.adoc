@@ -50,10 +50,12 @@ The OBS {opensuse} link:https://build.opensuse.org/image_templates[container ima
 Container images can either be built with *native Docker tools* - based on an existing image using a Dockerfile.
 Or they can be built from scratch using the *{kiwi} imaging solution*.
 
+////
 TODO::
   * should this contain specific instructions on how to build containers or is linking to https://openbuildservice.org/2018/05/09/container-building-and-distribution/ enough?
+////
 
-=== {kiwi}
+==== {kiwi}
 
 *KIWI Next Generation* is a multi purpose imaging solution. Beside container images, classical installation ISOs and images for virtual machines {kiwi} can also build images that boot via PXE or Vagrant boxes.
 The basis is an image XML description. Such a description is represented by a directory which
