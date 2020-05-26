@@ -62,9 +62,26 @@ A list of all currently defined labels follows:
 
 ==== Tags
 
-Tags can be freely defined. During the release of a new build, the new builds are released into the target project (See Base Container Image Building) and the old images are kept. If a tag is provided by multiple images, the newest image is used.
+Tags are used for clarity and unlike labels, they can be freely defined. Tags usually contain information about the specific version of the container image.
 
-Which tags a container image provides is entirely up to the maintainer of the image, as this varies depending on the use case. Consider the restriction explained in "Restrictions on projects for publishing images" above.
+During the release of a new build, the new builds are released into the target project and the old images are kept. If a tag is provided by multiple images, the newest image is used. Which tags a container image provides is entirely up to the maintainer of the image, as this varies depending on the use case.
+
+The conventional tag format is `repository name`: `image version specification`(usually version number). For example the tag for the latest published image of {15sp1} would be `suse/sle15:15.1`.
+
+The following table shows example {slea} container image tags that can be currently found on `registry.suse.com`. Some tags are regularly updated, which means they don't annotate the exact image version, they rather have the function of placeholders, for example the latest image. The regularly updated tags are printed in bold.
+
+.Examples of Currently Used Tags
+|===
+| Repository name: Tag | Description
+| suse/sle12sp3: *latest*	| Latest published image of SLE 12 SP3.
+| suse/sle12sp3: *2.0.2* | Same as `latest`. Only kept for backwards-compatibility.
+| suse/sle15: *latest*	| Latest published image of the SLE 15 codestream. Same as 15.1 and 15.1.1.1 in this example.
+| suse/sle15: *15.1*	| Latest published image of SLE 15 SP1.
+| suse/sle15: 15.1.1.1	| Same as 15.1.1.0, but contains some updated packages.
+| suse/sle15: 15.1.1.0	| First SLE 15 SP1 image.
+| suse/sle15: *15.0*	Latest published image of SLE 15. Same as 15.0.4.2 in this example.
+|===
+
 
 [[suse-registry]]
 === {suse} Registry
