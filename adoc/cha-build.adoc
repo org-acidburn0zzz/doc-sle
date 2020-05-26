@@ -21,8 +21,8 @@ For an introduction on how to create custom base {sle} docker images see link:ht
 [[podman]]
 ==== Podman
 
-Podman is short for *Pod Manager tool* and it's purpose extends beyond just building images.
-It is a *daemonless* container engine for developing, managing, and running OCI containers on your Linux System.
+Podman is short for *Pod Manager tool* and as it's name would suggest, it's purpose extends beyond just building images.
+It is a *daemonless* container engine for developing, managing, and running OCI containers on your Linux System and it is a fully supported alternative for Docker.
 Podman is also the default container runtime in *openSUSE Kubic* - a certified Kubernetes distribution & container-related technologies built by the {opensuse} community.
 Podman can be used to create OCI-compliant container images using a Dockerfile and a range of commands similar to Docker.
 For example the `podman build` command fulfills essentially the same function as `docker build` except that it does not use the Docker daemon to do it.
