@@ -2,6 +2,8 @@
 
 === Single Nodes
 
+//=== SLES
+
 === Container Orchestration
 
 ==== Pod deployment with Podman
@@ -12,8 +14,13 @@ Apart from being able to build images, Podman (see <<podman>>) also has a contai
 
 //==== {caasp}
 
+//=== CAP?
 
 
 === Monitoring, Patching & Updating
 
-//==== SUMA?
+//==== Best practices
+
+//==== SUSE Manager
+
+//==== CaaSP
