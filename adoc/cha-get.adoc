@@ -128,4 +128,4 @@ Portus can be deployed using a standard Docker container, but also inside a Kube
 For instructions on how to install Portus from the SUSE Container Registry see the link:https://documentation.suse.com/sles/12-SP4/html/SLES-all/cha-registry-installation.html#sec-docker-portus[{slsa} Documentation].
 
 
-=== 3rd Party Containers
+// TODO === 3rd Party Containers

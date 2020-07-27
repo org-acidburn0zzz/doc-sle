@@ -40,13 +40,13 @@ include::cha-build.adoc[Building Containers]
 //Getting Containers
 include::cha-get.adoc[Getting Containers]
 //Deploying and Running Containers
-include::cha-deploy-run.adoc[Deploying and Running Containers]
+// TODO include::cha-deploy-run.adoc[Deploying and Running Containers]
 //Interoperability
-include::cha-interop.adoc[Interoperability]
+// TODO include::cha-interop.adoc[Interoperability]
 //Supportability
 include::cha-support.adoc[Supportability]
 //Security
-include::cha-secure.adoc[Security]
+// TODO include::cha-secure.adoc[Security]
 
 
 
