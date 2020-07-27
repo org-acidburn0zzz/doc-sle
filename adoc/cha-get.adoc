@@ -1,4 +1,5 @@
 
+[#cha-containers-get]
 == Getting Containers
 
 This chapter is about how and where to get ready built container images.
@@ -8,7 +9,7 @@ This chapter is about how and where to get ready built container images.
 
 {suse} offers a large number of official container base images, which users can use to build containers with. Each base image {slea} contains the {slea} OS of a particular {slea} release minus the kernel. The OS contained in the base image is an empty environment without any further functionality. You, as a user, put your own workload into it, to make it functional.
 
-Base images are available through the {suse} Registry under `registry.suse.com`. For details about {suse} Registry see <<suse-registry>>. The images you can find in the {suse} Registry are all Generally Available (Production) and link:https://www.suse.com/products/long-term-service-pack-support/[LTSS] releases of SLES 12 and SLES 15. The available images are all compressed to a minimal size of *40MB*. {sle} base images in {suse} Registry are also fully supported, which means they get regularly updated with security fixes and the {suse} support plans apply. For more information about the support plans see <<supportability>>.
+Base images are available through the {suse} Registry under `registry.suse.com`. For details about {suse} Registry see <<suse-registry>>. The images you can find in the {suse} Registry are all Generally Available (Production) and link:https://www.suse.com/products/long-term-service-pack-support/[LTSS] releases of SLES 12 and SLES 15. The available images are all compressed to a minimal size of *40MB*. {sle} base images in {suse} Registry are also fully supported, which means they get regularly updated with security fixes and the {suse} support plans apply. For more information about the support plans see <<cha-container-support>>.
 
 === {suse} Container Properties
 

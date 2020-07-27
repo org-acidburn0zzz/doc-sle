@@ -1,5 +1,5 @@
 
-[[supportability]]
+[#cha-containers-support]
 == Supportability
 
 This chapter explains how {slsa} container support plans work.
