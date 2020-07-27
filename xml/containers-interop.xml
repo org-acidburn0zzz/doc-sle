@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?asciidoc-toc?><?asciidoc-numbered?><chapter xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Interoperability</title>
+<date>2020-07-27</date>
+</info>
+<section xml:id="cha-containers-interop">
+<title>Interoperability</title>
+<section xml:id="id-hardware-platform-support">
+<title>Hardware Platform Support</title>
+
+</section>
+<section xml:id="id-foreign-containers-on-suse-container-host-platforms">
+<title>Foreign Containers on SUSE Container Host Platforms</title>
+
+</section>
+<section xml:id="id-sle-based-containers-on-3rd-party-platforms">
+<title>SLE-Based Containers on 3rd Party Platforms</title>
+
+</section>
+</section>
+</chapter>
