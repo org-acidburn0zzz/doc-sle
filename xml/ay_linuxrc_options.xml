@@ -7,7 +7,6 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <appendix xmlns="http://docbook.org/ns/docbook"
  xmlns:xi="http://www.w3.org/2001/XInclude"
  xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
@@ -15,13 +14,13 @@
 
  <title>Advanced <command>linuxrc</command> Options</title>
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker>
    </dm:bugtracker>
-  </dm:docmanager>
- </info>
-
-  <para>
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
    <command>linuxrc</command> is a small program that runs after the kernel has
    loaded, but before &ay; or other stages. It prepares the system for
    installation. It allows the user to load modules, start an installed system
@@ -112,8 +111,7 @@
 
    <para>
     The table below lists important keys and example values. For a complete
-    list of <command>linuxrc</command> parameters, refer to <link
-    xlink:href="https://en.opensuse.org/SDB:Linuxrc"/>.
+    list of <command>linuxrc</command> parameters, refer to <link xlink:href="https://en.opensuse.org/SDB:Linuxrc"/>.
    </para>
 
    <table>
@@ -340,8 +338,7 @@
         <para>
          Install from the repository specified with
          <replaceable>URL</replaceable>. For the syntax of
-         <replaceable>URL</replaceable> refer to <link
-         xlink:href="https://en.opensuse.org/SDB:Linuxrc#url_descr"/>.
+         <replaceable>URL</replaceable> refer to <link xlink:href="https://en.opensuse.org/SDB:Linuxrc#url_descr"/>.
         </para>
        </entry>
       </row>
@@ -617,8 +614,7 @@
    <para>
     Therefore, the network needs to be started explicitly. This used to be done
     with the <command>linuxrc</command> parameter <literal>netsetup</literal>.
-    Starting with &productname; <phrase os="osuse">13.2</phrase><phrase
-    os="sles;sled">12</phrase>, the parameter <literal>ifcfg</literal> is
+    Starting with &productname; <phrase os="osuse">13.2</phrase><phrase os="sles;sled">12</phrase>, the parameter <literal>ifcfg</literal> is
     available. It offers more configuration options, for example configuring
     more than one interface. <literal>ifcfg</literal> directly controls the
     content of the <filename>/etc/sysconfig/network/ifcfg-*</filename> files.
@@ -672,8 +668,7 @@
     </varlistentry>
    </variablelist>
    <para>
-    For more information refer to <link
-    xlink:href="https://en.opensuse.org/SDB:Linuxrc#Network_Configuration"/>.
+    For more information refer to <link xlink:href="https://en.opensuse.org/SDB:Linuxrc#Network_Configuration"/>.
    </para>
   </sect1>
  </appendix>

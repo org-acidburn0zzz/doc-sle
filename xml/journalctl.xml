@@ -4,18 +4,16 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="cha-journalctl">
  <title><command>journalctl</command>: Query the &systemd; Journal</title>
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker></dm:bugtracker>
-   <dm:translation>yes</dm:translation>
-  </dm:docmanager>
- </info>
- <para>
-  When &systemd; replaced traditional init scripts in <phrase
-  os="sles;sled">&sle; 12</phrase><phrase os="osuse">&opensuse; Leap</phrase>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker/>
+        <dm:translation>no</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
+  When &systemd; replaced traditional init scripts in <phrase os="sles;sled">&sle; 12</phrase><phrase os="osuse">&opensuse; Leap</phrase>
   (see <xref linkend="cha-systemd"/>), it introduced its own logging system
   called <emphasis>journal</emphasis>. There is no need to run a
   <systemitem>syslog</systemitem> based service anymore, as all system events

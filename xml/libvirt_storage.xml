@@ -4,15 +4,15 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="cha-libvirt-storage">
  <title>Managing Storage</title>
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker></dm:bugtracker>
-  </dm:docmanager>
- </info>
- <para>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker/>
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
   When managing a &vmguest; on the &vmhost; itself, you can access the complete
   file system of the &vmhost; to attach or create virtual hard disks or to
   attach existing images to the &vmguest;. However, this is not possible when
@@ -930,8 +930,7 @@ done</screen>
    <title>Attaching Volumes to a &vmguest;</title>
    <para>
     After you create a volume as described in
-    <xref
-     linkend="sec-libvirt-storage-virsh-add-volumes"/>, you can
+    <xref linkend="sec-libvirt-storage-virsh-add-volumes"/>, you can
     attach it to a virtual machine and use it as a hard disk:
    </para>
 <screen>&prompt.user;virsh attach-disk <replaceable>DOMAIN</replaceable> <replaceable>SOURCE_IMAGE_FILE</replaceable> <replaceable>TARGET_DISK_DEVICE</replaceable></screen>
@@ -945,14 +944,14 @@ done</screen>
    </para>
 <screen>&prompt.root;virsh dumpxml sles12sp3
 [...]
-&lt;disk type='file' device='disk'>
- &lt;driver name='qemu' type='raw'/>
- &lt;source file='/virt/images/example_disk.qcow2'/>
- &lt;backingStore/>
- &lt;target dev='sda2' bus='scsi'/>
- &lt;alias name='scsi0-0-0'/>
- &lt;address type='drive' controller='0' bus='0' target='0' unit='0'/>
-&lt;/disk>
+&lt;disk type='file' device='disk'&gt;
+ &lt;driver name='qemu' type='raw'/&gt;
+ &lt;source file='/virt/images/example_disk.qcow2'/&gt;
+ &lt;backingStore/&gt;
+ &lt;target dev='sda2' bus='scsi'/&gt;
+ &lt;alias name='scsi0-0-0'/&gt;
+ &lt;address type='drive' controller='0' bus='0' target='0' unit='0'/&gt;
+&lt;/disk&gt;
 [...]</screen>
    <sect3>
     <title>Hotplug or Persistent Change</title>
@@ -1017,8 +1016,7 @@ done</screen>
    <para>
     You can control the attachment with the <option>--live</option> and
     <option>--config</option> options as described in
-    <xref
-     linkend="libvirt-storage-virsh-attach-volumes"/>.
+    <xref linkend="libvirt-storage-virsh-attach-volumes"/>.
    </para>
   </sect2>
  </sect1>
@@ -1035,17 +1033,14 @@ done</screen>
 
   <para>
    The locking is controlled by a daemon called
-   <systemitem
-   class="daemon">virtlockd</systemitem>. Since it operates
+   <systemitem class="daemon">virtlockd</systemitem>. Since it operates
    independently from the &libvirtd; daemon, locks will endure a crash or a
    restart of &libvirtd;. Locks will even persist in the case of an update of
    the <systemitem class="daemon">virtlockd</systemitem> itself, since it can
    re-execute itself. This ensures that &vmguest;s do <emphasis>not</emphasis>
    need to be restarted upon a
-   <systemitem
-   class="daemon">virtlockd</systemitem> update.
-   <systemitem
-   class="daemon">virtlockd</systemitem> is supported for &kvm;,
+   <systemitem class="daemon">virtlockd</systemitem> update.
+   <systemitem class="daemon">virtlockd</systemitem> is supported for &kvm;,
    &qemu;, and &xen;.
   </para>
 
@@ -1333,8 +1328,7 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes</screen>
         Same as <guimenu>Passthrough</guimenu>, but failure of privileged
         operations like <command>chown</command> are ignored. This is required
         when &kvm; is not run with
-        <systemitem
-        class="username">root</systemitem> privileges.
+        <systemitem class="username">root</systemitem> privileges.
        </para>
       </listitem>
      </varlistentry>

@@ -7,8 +7,8 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="cha-squid">
  <title>Squid Caching Proxy Server</title>
  <info>
-  <abstract>
-   <para>
+      <abstract>
+        <para>
     Squid is a widely-used caching proxy server for Linux and Unix platforms.
     This means that it stores requested Internet objects, such as data on a Web
     or FTP server, on a machine that is closer to the requesting workstation
@@ -16,13 +16,13 @@
     response times and low bandwidth usage, even in modes that are transparent
     to end users.
    </para>
-  </abstract>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker></dm:bugtracker>
-   <dm:translation>yes</dm:translation>
-  </dm:docmanager>
- </info>
- <para>
+      </abstract>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker/>
+        <dm:translation>no</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
   Squid acts as a caching proxy server. It redirects object requests from
   clients (in this case, from Web browsers) to the server. When the requested
   objects arrive from the server, it delivers the objects to the client and
@@ -389,13 +389,13 @@ X-Cache-Lookup: MISS from moon:3128
 Via: 1.1 moon (squid/3.5.16)<co xml:id="co-squid-via"/>
 Connection: close
 
-<![CDATA[<!doctype html>
-<html>
-<head>
-    <title>Example Domain</title>
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Example Domain&lt;/title&gt;
 [...]
-</body>
-</html>]]></screen>
+&lt;/body&gt;
+&lt;/html&gt;</screen>
       <para>
        The output shown in <xref linkend="ex-squidclient-request"/> can be
        split into two parts:
@@ -690,8 +690,7 @@ Connection: close
    <filename>/etc/squid/squid.conf</filename> file. To start Squid for the
    first time, no changes are necessary in this file, but external clients are
    initially denied access. The proxy is available for
-   <systemitem
-   class="domainname">localhost</systemitem>. The default port
+   <systemitem class="domainname">localhost</systemitem>. The default port
    is <option>3128</option>. The preinstalled configuration file
    <filename>/etc/squid/squid.conf</filename> provides detailed information
    about the options and many examples.

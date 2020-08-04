@@ -15,8 +15,10 @@
  <subtitle>&productname; &productnumber;</subtitle>
  <info>
       <productnumber>&productnumber;</productnumber>
-  <productname>&productname;</productname><date>
-   <?dbtimestamp format="B d, Y"?></date>
+      <productname>&productname;</productname>
+      <date>
+        <?dbtimestamp format="B d, Y"?>
+      </date>
       <abstract>
         <para>
     As the &kvm; virtualization solution is becoming more and more
@@ -31,6 +33,7 @@
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
         <dm:bugtracker>
           </dm:bugtracker>
+        <dm:translation>yes</dm:translation>
       </dm:docmanager>
     </info>
     <?suse-quickstart color="suse"?>
@@ -59,8 +62,7 @@
     Windows guests using <command>virt-v2v</command> is the same as
     converting Linux guests, except in regards to handling the Virtual
     Machine Driver Pack (VMDP). Additional details on converting Windows
-    guests with the VMDP can be found in the separate at <link
-     xlink:href="https://documentation.suse.com/sle-vmdp/">Virtual Machine Driver
+    guests with the VMDP can be found in the separate at <link xlink:href="https://documentation.suse.com/sle-vmdp/">Virtual Machine Driver
      Pack documentation</link>.
    </para>
   </tip>
@@ -159,8 +161,7 @@
    <para>
     <command>virt-v2v</command> converts virtual machines from the &xen;
     hypervisor to run under &kvm; managed by &libvirt;. To learn more
-    about &libvirt; and <command>virsh</command>, see <xref
-    linkend="part-virt-libvirt"/>. Additionally, all
+    about &libvirt; and <command>virsh</command>, see <xref linkend="part-virt-libvirt"/>. Additionally, all
     <command>virt-v2v</command> command line options are explained in
     the <command>virt-v2v</command> manual page (<command>man 1
     virt-v2v</command>).
@@ -526,8 +527,7 @@
    <tip>
     <title>Rebooting the Machine</title>
     <para>
-     If you completed the conversion under &xen; as described in <xref
-     linkend="x2k-v2v-convert-domain"/>, you may need to reboot the host machine
+     If you completed the conversion under &xen; as described in <xref linkend="x2k-v2v-convert-domain"/>, you may need to reboot the host machine
      and boot with the non-&xen; kernel.
     </para>
    </tip>
@@ -542,8 +542,7 @@
    <title>General Outline</title>
    <para>
     The preferred solution to manage virtual machines is based on
-    &libvirt;; for more information, see <link
-    xlink:href="http://libvirt.org/"/>.  It has several advantages over
+    &libvirt;; for more information, see <link xlink:href="http://libvirt.org/"/>.  It has several advantages over
     the manual way of defining and running virtual
     machines&mdash;&libvirt; is cross-platform, supports many
     hypervisors, has secure remote management, has virtual networking, and, most

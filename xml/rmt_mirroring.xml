@@ -4,12 +4,15 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="cha-rmt-mirroring">
 <!-- ==================================================================== -->
  <title>Mirroring Repositories on the &rmt; Server</title>
- <info/>
- <para>
+ <info>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
   You can mirror the installation and update repositories on the &rmt;
   server. This way, you do not need to download updates on each
   machine, which saves time and bandwidth.
@@ -148,8 +151,7 @@ Jun 22 04:22:34 d31 systemd[1]: Started RMT Sync timer.</screen>
 Jun 22 04:22:34 d31 systemd[1]: Started RMT Mirror timer.</screen>
   <para>
    To update the mirrored packages manually, use the <command>rmt-cli
-   mirror</command> command. For details, see <xref
-   linkend="sec-rmt-tools-rmt-cli-mirror"/>.
+   mirror</command> command. For details, see <xref linkend="sec-rmt-tools-rmt-cli-mirror"/>.
   </para>
  </sect1>
 
@@ -309,7 +311,7 @@ Repository successfully disabled.</screen>
   </procedure>
   <para>
    To get a list of all available custom repositories commands, see
-   <xref linkend="sec-rmt-tools-rmt-cli-repos" />.
+   <xref linkend="sec-rmt-tools-rmt-cli-repos"/>.
   </para>
  </sect1>
 
@@ -405,8 +407,7 @@ Repository successfully disabled.</screen>
    <step>
     <para>
      Enable repositories as required on the <literal>sirius</literal>.
-     For details, see <xref linkend="sec-rmt-mirroring-enable-disable"
-     />.
+     For details, see <xref linkend="sec-rmt-mirroring-enable-disable"/>.
     </para>
    </step>
   </procedure>

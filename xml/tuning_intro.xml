@@ -4,7 +4,6 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <preface version="5.0" xml:id="preface-tuning"
   xmlns="http://docbook.org/ns/docbook"
   xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -14,6 +13,7 @@
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
         <dm:bugtracker>
           </dm:bugtracker>
+        <dm:translation>yes</dm:translation>
       </dm:docmanager>
     </info>
     <para>
@@ -140,9 +140,7 @@
   <title>Getting the &sle; SDK</title>
   <para>
    The SDK is a module for &sle; and is available via an online channel from
-   the &scc;.  Alternatively, go to <link
-   os="sles;sled" xlink:href="http://download.suse.com/"/><link
-   os="osuse" xlink:href="https://doc.opensuse.org/"/>, search for <literal>&sle;
+   the &scc;.  Alternatively, go to <link os="sles;sled" xlink:href="http://download.suse.com/"/><link os="osuse" xlink:href="https://doc.opensuse.org/"/>, search for <literal>&sle;
    Software Development Kit</literal> and download it from there.
    Refer to <xref linkend="cha-add-ons"/> for details.
   </para>

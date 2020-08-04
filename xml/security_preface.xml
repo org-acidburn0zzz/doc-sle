@@ -4,24 +4,23 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="cha-security">
  <title>Security and Confidentiality</title>
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker></dm:bugtracker>
-  </dm:docmanager>
-  <abstract>
-   <para>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker/>
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+      <abstract>
+        <para>
     This chapter introduces basic concepts of computer security.
     Threats and basic mitigation techniques are described. The chapter
     also provides references to other chapters, guides and Web sites with
     further information.
    </para>
-  </abstract>
- </info>
-
- <sect1 xml:id="sec-security-overview">
+      </abstract>
+    </info>
+    <sect1 xml:id="sec-security-overview">
   <title>Overview</title>
   <para>
    One main characteristic of Linux is its ability to handle multiple
@@ -89,8 +88,7 @@
    securing your system.
   </para>
   <para os="sles">
-   Find more details about hardening your system in <xref
-   linkend="book-hardening" />.
+   Find more details about hardening your system in <xref linkend="book-hardening"/>.
   </para>
  </sect1>
 
@@ -111,15 +109,11 @@
   <para>
    The <emphasis>National Institute of Standards and
    Technology</emphasis> (<emphasis>NIST</emphasis>) publishes a
-   guideline for passwords, which is available at <link
-   xlink:href="https://pages.nist.gov/800-63-3/sp800-63b.html#sec5"
-   />
+   guideline for passwords, which is available at <link xlink:href="https://pages.nist.gov/800-63-3/sp800-63b.html#sec5"/>
   </para>
   <para>
-   For details about how to set a password policy, see <xref
-   linkend="sec-security-yast-security-password" />. For general
-   information about authentication on Linux, see <xref
-   linkend="part-auth" />.
+   For details about how to set a password policy, see <xref linkend="sec-security-yast-security-password"/>. For general
+   information about authentication on Linux, see <xref linkend="part-auth"/>.
   </para>
  </sect1>
 
@@ -207,21 +201,18 @@
    attack. By following the above rule, minimize the possible damage.
   </para>
   <para>
-   For details, see <xref linkend="sec-security-acls-traditional" /> and
-   <xref linkend="sec-security-acls-intro" />.
+   For details, see <xref linkend="sec-security-acls-traditional"/> and
+   <xref linkend="sec-security-acls-intro"/>.
   </para>
   <para>
-   &aa; <phrase os="osuse;sles">and SELinux allow</phrase><phrase
-   os="sled">allows</phrase> you to set constraints for applications and
-   users. For details, see <xref linkend="part-apparmor" /><phrase
-   os="sles;osuse"> and <xref linkend="part-selinux" /></phrase>.
+   &aa; <phrase os="osuse;sles">and SELinux allow</phrase><phrase os="sled">allows</phrase> you to set constraints for applications and
+   users. For details, see <xref linkend="part-apparmor"/><phrase os="sles;osuse"> and <xref linkend="part-selinux"/></phrase>.
   </para>
   <para>
    If there is a chance that hard disks could be accessed outside of the
    installed operating system, for example by booting a live system or removing
    the hardware, encrypt the data. &productname; allows you to encrypt
-   partitions containing data and the operating system. For details, see <xref
-   linkend="cha-security-cryptofs" />.
+   partitions containing data and the operating system. For details, see <xref linkend="cha-security-cryptofs"/>.
   </para>
  </sect1>
 
@@ -255,21 +246,19 @@
      Usually, at least parts of networks are exposed to the public
      Internet. Reduce attack surfaces by closing ports with firewall
      rules and by uninstalling or at least disabling unrequired
-     services. For details, see <xref linkend="cha-security-firewall"
-     />.
+     services. For details, see <xref linkend="cha-security-firewall"/>.
     </para>
    </listitem>
    <listitem>
     <para>
      Use OpenVPN to secure communication channels over insecure
-     physical networks. For details, see <xref
-     linkend="cha-security-vpnserver" />.
+     physical networks. For details, see <xref linkend="cha-security-vpnserver"/>.
     </para>
    </listitem>
    <listitem>
     <para>
      Use strong authentication for network services. For details, see
-     <xref linkend="part-auth" />.
+     <xref linkend="part-auth"/>.
     </para>
    </listitem>
   </itemizedlist>
@@ -305,9 +294,9 @@
   </para>
   <para>
    &suse; provides a feed of security advisories. It is available at
-   <link xlink:href="https://www.suse.com/en-us/support/update/" />.
+   <link xlink:href="https://www.suse.com/en-us/support/update/"/>.
    There is also a list of security updates by CVE number available at
-   <link xlink:href="https://www.suse.com/en-us/security/cve/" />.
+   <link xlink:href="https://www.suse.com/en-us/security/cve/"/>.
   </para>
   <note os="sles;sled">
    <title>Backports and Version Numbers</title>
@@ -333,7 +322,7 @@
   </para>
   <para>
    To reduce the damage of possible attacks, use restrictive file
-   permissions. See <xref linkend="sec-security-acls-traditional" />.  &suse;
+   permissions. See <xref linkend="sec-security-acls-traditional"/>.  &suse;
    provides a guide to hardening &productname;. <phrase os="sles">For details,
    see <xref linkend="book-hardening"/>.</phrase>
   </para>
@@ -343,33 +332,28 @@
   <itemizedlist>
    <listitem>
     <para>
-     <link xlink:href=
-     "http://lists.opensuse.org/opensuse-security-announce/" />,
+     <link xlink:href="http://lists.opensuse.org/opensuse-security-announce/"/>,
      mailing list with &opensuse; security announcements
     </para>
    </listitem>
    <listitem>
     <para>
-     <link xlink:href= "https://nvd.nist.gov/home"/>, the National
+     <link xlink:href="https://nvd.nist.gov/home"/>, the National
      Vulnerability Database
     </para>
    </listitem>
    <listitem>
     <para>
-     <link xlink:href="https://cve.mitre.org/" />, MITRE's CVE database
+     <link xlink:href="https://cve.mitre.org/"/>, MITRE's CVE database
     </para>
    </listitem>
    <listitem>
-    <para><link
-    xlink:href="https://www.bsi.bund.de/DE/Service/Aktuell/Cert_Bund_Meldungen/cert_bund_meldungen_node.html"
-    />, <emphasis>German Federal Office for Information
+    <para><link xlink:href="https://www.bsi.bund.de/DE/Service/Aktuell/Cert_Bund_Meldungen/cert_bund_meldungen_node.html"/>, <emphasis>German Federal Office for Information
     Security</emphasis> vulnerability feed</para>
    </listitem>
    <listitem>
     <para>
-    <link
-    xlink:href="https://www.first.org/cvss/"
-    />, information about the Common Vulnerability Scoring System
+    <link xlink:href="https://www.first.org/cvss/"/>, information about the Common Vulnerability Scoring System
     </para>
    </listitem>
   </itemizedlist>

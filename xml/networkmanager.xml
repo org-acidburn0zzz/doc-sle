@@ -4,17 +4,15 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <sect1 xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="sec-network-nm">
  <title>&nm;</title><info>
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
         <dm:bugtracker>
           </dm:bugtracker>
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
       </dm:docmanager>
     </info>
-
- <para>
+    <para>
   &nm; is the ideal solution for laptops and other portable computers.
   With &nm;, you do not need to worry about configuring network
   interfaces and switching between networks when you are moving.

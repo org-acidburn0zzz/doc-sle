@@ -7,11 +7,12 @@
 <chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="cha-virt-support">
  <title>Supported Hosts, Guests, and Features</title>
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker></dm:bugtracker>
-  </dm:docmanager>
- </info>
- <para os="sles;sled">
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker/>
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para os="sles;sled">
   Supported architectures and virtualization limits for &xen; and &kvm; are
   outlined in the <link xlink:href="https://www.suse.com/releasenotes/">Release
   Notes</link>.
@@ -22,8 +23,7 @@
   <para>
    This section lists the support status of &productname; &productnumber;
    running as a guest on top of various virtualization hosts
-   (<xref
-    linkend="gloss-vt-hypervisor"/>).
+   (<xref linkend="gloss-vt-hypervisor"/>).
   </para>
 
   <itemizedlist>
@@ -300,8 +300,7 @@
   <para>
    <phrase os="sles"> The general minimum hardware requirements for the
    &vmhost; are the same as outlined in
-   <xref
-   linkend="sec-x86-requirements"/>.</phrase> <phrase os="sled;osuse">
+   <xref linkend="sec-x86-requirements"/>.</phrase> <phrase os="sled;osuse">
    The general minimum hardware requirements for the &vmhost; are the same as
    for a physical machine.</phrase> However, additional RAM for each
    virtualized guest is needed. It should at least be the same amount that is

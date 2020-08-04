@@ -11,7 +11,12 @@
          xml:id="cha-configure-cryptctl">
     
   <title>Storage Encryption for Hosted Applications with cryptctl</title>
-   <para>
+   <info>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
     Databases and similar applications are often hosted on external
     servers that are serviced by third-party staff. Certain data center
     maintenance tasks require third-party staff to directly access affected

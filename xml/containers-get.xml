@@ -9,9 +9,12 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns:xlink="http://www.w3.org/1999/xlink">
  <info>
-  <title>Obtaining Containers</title>
- </info>
- <para>
+      <title>Obtaining Containers</title>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
   This chapter provides information on obtaining container images.
  </para>
  <sect1 xml:id="id-sle-base-images">
@@ -274,7 +277,7 @@
        </entry>
        <entry align="left" valign="top">
         <para>
-         <link xlink:href="https://www.suse.com/products/server/" />
+         <link xlink:href="https://www.suse.com/products/server/"/>
         </para>
        </entry>
       </row>
@@ -465,7 +468,7 @@
 
   <para>
    The official &suse; Registry is available at
-   <link xlink:href="https://registry.suse.com" />. It contains tested and
+   <link xlink:href="https://registry.suse.com"/>. It contains tested and
    updated &sle; and &slsa; base container images. All images in the &suse;
    Registry undergo a fixed maintenance process. The images are regularly
    updated with the latest security fixes. While the &suse; Registry can be

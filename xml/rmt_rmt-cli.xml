@@ -4,10 +4,14 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <sect1 xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="sec-rmt-tools-rmt-cli">
  <title>&rmt; Command Line Interface</title>
- <para/>
+ <info>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para/>
 
  <sect2 xml:id="sec-rmt-tools-rmt-cli-overview">
   <title>rmt-cli Overview</title>
@@ -265,8 +269,7 @@
   <title><command>import</command></title>
   <para>
    This command is required for the <emphasis>offline mode</emphasis>.
-   For details, see <xref linkend="sec-rmt-mirroring-export-import"
-   />.
+   For details, see <xref linkend="sec-rmt-mirroring-export-import"/>.
   </para>
   <variablelist>
    <varlistentry>
@@ -293,8 +296,7 @@
   <title><command>export</command></title>
   <para>
    This command is required for the <emphasis>offline mode</emphasis>.
-   For details, see <xref linkend="sec-rmt-mirroring-export-import"
-   />.
+   For details, see <xref linkend="sec-rmt-mirroring-export-import"/>.
   </para>
   <variablelist>
    <varlistentry>

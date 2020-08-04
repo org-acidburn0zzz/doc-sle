@@ -4,7 +4,6 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <sect1 version="5.0" xml:id="CreateProfile-Register" os="sles;sled"
   xmlns="http://docbook.org/ns/docbook"
   xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -12,13 +11,12 @@
   <title>System Registration and Extension Selection</title>
 
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker></dm:bugtracker>
-   <dm:translation>yes</dm:translation>
-  </dm:docmanager>
- </info>
-
- <para>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker/>
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
     Registering the system with the registration server can be configured
     within the <literal>suse_register</literal> resource. The following example
     registers the system with the &scc;. In case your organization provides its
@@ -343,7 +341,7 @@
      To retrieve a fingerprint from the &smt; server, use the following
      command:
     </para>
-<screen>curl --insecure -v https://scc.suse.com/smt.crt 2> /dev/null | openssl
+<screen>curl --insecure -v https://scc.suse.com/smt.crt 2&gt; /dev/null | openssl
 x509 -noout -fingerprint -sha256</screen>
      <para>
      Replace <literal>scc.suse.com</literal> with your server.
@@ -424,8 +422,7 @@ x509 -noout -fingerprint -sha256</screen>
 </note>
 
     <para>
-     For background information and add-on listings for &slsa; see <link
-     xlink:href="https://github.com/yast/yast-registration/wiki/Available-SCC-Extensions-for-Use-in-Autoyast"/>.
+     For background information and add-on listings for &slsa; see <link xlink:href="https://github.com/yast/yast-registration/wiki/Available-SCC-Extensions-for-Use-in-Autoyast"/>.
      The listings will get updated from time to time.
     </para>
    </sect2>

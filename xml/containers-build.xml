@@ -9,9 +9,12 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns:xlink="http://www.w3.org/1999/xlink">
  <info>
-  <title>Building Containers</title>
- </info>
- <para>
+      <title>Building Containers</title>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
   This chapter provides an overview of tools for creating containers. Most of
   the tools mentioned below are part of the <emphasis role="strong">&sls; 15
   SP2 Containers Module</emphasis>. You can see the full list of packages in
@@ -151,10 +154,10 @@
 
   <para>
    There are no official &slea; container images on
-   <link xlink:href="https://build.opensuse.org" />, and the RPMs exported
+   <link xlink:href="https://build.opensuse.org"/>, and the RPMs exported
    there are not identical to the internal ones. This means that it is not
    possible to build officially supported images on
-   <link xlink:href="https://build.opensuse.org" />.
+   <link xlink:href="https://build.opensuse.org"/>.
   </para>
  </sect1>
 </chapter>

@@ -10,15 +10,14 @@
  <title>Product Life Cycle and Support</title>
 
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker>
-<!--<dm:assignee></dm:assignee>-->
-   </dm:bugtracker>
-   <dm:translation>yes</dm:translation>
-  </dm:docmanager>
- </info>
-
- <para>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker>
+          <!--<dm:assignee></dm:assignee>-->
+        </dm:bugtracker>
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
   &suse; products are supported for up to 13 years. To check the life cycle
   dates for your product, see
   <link xlink:href="https://www.suse.com/lifecycle/"/>.
@@ -58,19 +57,15 @@
  <para>
   For some products, Long Term Service Pack Support (LTSS) is available. Find
   information about our support policy and options at
-  <link
-   xlink:href="https://www.suse.com/support/policy.html"/> and
-  <link
-   xlink:href="https://www.suse.com/support/programs/long-term-service-pack-support.html"
-  />.
+  <link xlink:href="https://www.suse.com/support/policy.html"/> and
+  <link xlink:href="https://www.suse.com/support/programs/long-term-service-pack-support.html"/>.
  </para>
 
  <para os="sles;sled">
   Modules have a different life cycle, update policy, and update timeline than
   their base products. Modules contain software packages and are fully
   supported parts of &productname;. For more information, see the
-  <xref
-   linkend="art-modules"/>.
+  <xref linkend="art-modules"/>.
  </para>
 
  <sect2>

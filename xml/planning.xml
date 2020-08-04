@@ -10,18 +10,18 @@
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Planning for &productname;</title>
  <info>
-  <abstract>
-   <para>
+      <abstract>
+        <para>
     This chapter describes some basic considerations before installing
     &productname;.
    </para>
-  </abstract>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker/>
-   <dm:translation>yes</dm:translation>
-  </dm:docmanager>
- </info>
- <sect1 xml:id="sec-planning-start">
+      </abstract>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker/>
+        <dm:translation>no</dm:translation>
+      </dm:docmanager>
+    </info>
+    <sect1 xml:id="sec-planning-start">
   <title>Considerations for Deployment of a &sls;</title>
 
   <para>
@@ -47,16 +47,14 @@
    <listitem>
     <para>
      Will the system be in a hostile environment? Have a look at
-     <xref
-      linkend="cha-security"/> to get an overview of consequences.
+     <xref linkend="cha-security"/> to get an overview of consequences.
     </para>
    </listitem>
    <listitem>
     <para>
      How will you get regular updates? All patches are provided online for
      registered users. Find the registration and patch support database at
-     <link
-      xlink:href="http://download.suse.com/"/>.
+     <link xlink:href="http://download.suse.com/"/>.
     </para>
    </listitem>
    <listitem>
@@ -64,8 +62,7 @@
      Do you need help for your local installation? &suse; provides training,
      support, and consulting for all topics pertaining to &sls;. Find more
      information about this at
-     <link
-      xlink:href="https://www.suse.com/products/server/"/>.
+     <link xlink:href="https://www.suse.com/products/server/"/>.
     </para>
    </listitem>
    <listitem>
@@ -85,8 +82,7 @@
    certified hardware. The hardware certification process is an ongoing process
    and the database of certified hardware is updated regularly. Find the search
    form for certified hardware at
-   <link
-    xlink:href="https://www.suse.com/yessearch/Search.jsp"/>.
+   <link xlink:href="https://www.suse.com/yessearch/Search.jsp"/>.
   </para>
 
   <para>
@@ -98,9 +94,7 @@
 
   <para>
    &sls; provides you with a broad variety of services. Find an overview of the
-   documentation in this book in <xref
-    linkend="pre-sle"
-   />. Most of the
+   documentation in this book in <xref linkend="pre-sle"/>. Most of the
    needed configurations can be made with &yast;, the &suse; configuration
    utility. In addition, many manual configurations are described in the
    corresponding chapters.
@@ -157,29 +151,25 @@
   <para>
    In case your organization does not provide a local registration server,
    registering &sle; requires a &scc; account. In case you do not have one yet,
-   go to the &scc; home page (<link
-    xlink:href="https://scc.suse.com/"/>)
+   go to the &scc; home page (<link xlink:href="https://scc.suse.com/"/>)
    to create one.
   </para>
 
   <para>
    During the installation you will be asked to enter your registration code.
-   For details, see <xref
-    linkend="sec-yast-install-scc-registration"/>.
+   For details, see <xref linkend="sec-yast-install-scc-registration"/>.
   </para>
 
   <para>
    If you deploy your instances automatically using &ay;, you can register the
    system during the installation by providing the respective information in
    the &ay; control file. For details, see
-   <xref
-    linkend="CreateProfile-Register"/>.
+   <xref linkend="CreateProfile-Register"/>.
   </para>
 
   <para>
    For registering an already installed system, see
-   <xref
-    linkend="sec-yast-software-register"/>.
+   <xref linkend="sec-yast-software-register"/>.
   </para>
  </sect1>
  <sect1 xml:id="sec-planning-leanos">

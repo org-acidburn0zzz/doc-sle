@@ -21,13 +21,12 @@
  <title>Preparing for Installation</title>
 
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker/>
-   <dm:translation>yes</dm:translation>
-  </dm:docmanager>
- </info>
-
- <para>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker/>
+        <dm:translation>no</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
   This chapter explains how to make the data accessible for installation,
   install &productname; using different methods, and prepare and use the IPL of
   the &productname; installation system. The chapter also provides information
@@ -67,8 +66,7 @@
     installation data to the &zseries; installation process by NFS or
     FTP. If the Linux workstation runs &productname;, you can set up an
     installation server (NFS or FTP) using the &yast; <guimenu>Installation
-    Server</guimenu> module as described in <xref
-    linkend="sec-deployment-instserver-sles9"/>.
+    Server</guimenu> module as described in <xref linkend="sec-deployment-instserver-sles9"/>.
    </para>
     <important>
      <title>Exporting Mounted Devices with NFS</title>
@@ -218,8 +216,7 @@
     <title>Using an FCP-Attached SCSI DVD Drive</title>
     <para>
      After you IPLed from the SCSI DVD as described in
-     <xref
-      linkend="sec-prep-ipling-lpar-dvd"/>, the installation system uses
+     <xref linkend="sec-prep-ipling-lpar-dvd"/>, the installation system uses
      the DVD as the installation medium. In this case, you do not need the
      installation media on an FTP, NFS, or SMB server. However, you need the
      network configuration data for your &productname;, because you must set up
@@ -238,22 +235,22 @@
    <itemizedlist>
     <listitem>
      <para>
-      <xref xrefstyle="select:label nopage" linkend="sec-prep-makeavail-zpxe-cobbler-import" />
+      <xref xrefstyle="select:label nopage" linkend="sec-prep-makeavail-zpxe-cobbler-import"/>
      </para>
     </listitem>
     <listitem>
      <para>
-      <xref xrefstyle="select:label nopage" linkend="sec-prep-makeavail-zpxe-cobbler-add-distro" />
+      <xref xrefstyle="select:label nopage" linkend="sec-prep-makeavail-zpxe-cobbler-add-distro"/>
      </para>
     </listitem>
     <listitem>
      <para>
-      <xref xrefstyle="select:label nopage" linkend="sec-prep-makeavail-zpxe-cobbler-profile" />
+      <xref xrefstyle="select:label nopage" linkend="sec-prep-makeavail-zpxe-cobbler-profile"/>
      </para>
     </listitem>
     <listitem>
      <para>
-      <xref xrefstyle="select:label nopage" linkend="sec-prep-makeavail-zpxe-cobbler-system" />
+      <xref xrefstyle="select:label nopage" linkend="sec-prep-makeavail-zpxe-cobbler-system"/>
      </para>
     </listitem>
    </itemizedlist>
@@ -334,8 +331,7 @@
    <sect4 xml:id="sec-prep-makeavail-zpxe-cobbler-profile">
     <title>Adjusting the Profile</title>
     <para>
-     Adding a distribution (see <xref
-     linkend="sec-prep-makeavail-zpxe-cobbler-add-distro"/>) automatically
+     Adding a distribution (see <xref linkend="sec-prep-makeavail-zpxe-cobbler-add-distro"/>) automatically
      generates a profile with the corresponding
      <replaceable>IDENTIFIER</replaceable>. Use the following command to make a
      few required adjustments:
@@ -438,9 +434,7 @@ DASD=600"</screen>
     <listitem>
      <para>
       In the manual-mode installation using <filename>linuxrc</filename>, choose
-      <emphasis role="italic">Start Installation</emphasis>, then <emphasis
-      role="italic">Installation</emphasis>, and then <emphasis
-      role="italic">Hardware Management Console</emphasis>. The installation
+      <emphasis role="italic">Start Installation</emphasis>, then <emphasis role="italic">Installation</emphasis>, and then <emphasis role="italic">Hardware Management Console</emphasis>. The installation
       medium must be in the HMC.
      </para>
     </listitem>
@@ -495,15 +489,13 @@ DASD=600"</screen>
    <step>
     <para>
      Prepare the devices needed for installation. See
-     <xref
-      linkend="sec-prep-prep-ipl-natlpar"/>.
+     <xref linkend="sec-prep-prep-ipl-natlpar"/>.
     </para>
    </step>
    <step>
     <para>
      IPL the installation system. See
-     <xref
-      linkend="sec-prep-ipling-lpar"/>.
+     <xref linkend="sec-prep-ipling-lpar"/>.
     </para>
    </step>
    <step>
@@ -514,8 +506,7 @@ DASD=600"</screen>
    <step>
     <para>
      Connect to the &productname; installation system. See
-     <xref
-      linkend="sec-prep-connect"/>.
+     <xref linkend="sec-prep-connect"/>.
     </para>
    </step>
    <step>
@@ -530,15 +521,13 @@ DASD=600"</screen>
    <step>
     <para>
      Prepare the devices needed for installation. See
-     <xref
-      linkend="sec-prep-prep-ipl-vm-linux-guest"/>.
+     <xref linkend="sec-prep-prep-ipl-vm-linux-guest"/>.
     </para>
    </step>
    <step>
     <para>
      IPL the installation system. See
-     <xref
-      linkend="sec-prep-ipling-vm"/>.
+     <xref linkend="sec-prep-ipling-vm"/>.
     </para>
    </step>
    <step>
@@ -549,8 +538,7 @@ DASD=600"</screen>
    <step>
     <para>
      Connect to the &productname; installation system. See
-     <xref
-      linkend="sec-prep-connect"/>.
+     <xref linkend="sec-prep-connect"/>.
     </para>
    </step>
    <step>
@@ -582,8 +570,7 @@ DASD=600"</screen>
    <step>
     <para>
      Connect to the &productname; installation system. See
-     <xref
-      linkend="sec-prep-connect"/>.
+     <xref linkend="sec-prep-connect"/>.
     </para>
    </step>
    <step>
@@ -603,8 +590,7 @@ DASD=600"</screen>
    <para>
     Configure your &zseries; system to start in ESA/S390 or Linux-only mode
     with an appropriate activation profile and IOCDS. For further information,
-    refer to the IBM documentation. Continue as described in <xref
-    linkend="sec-prep-ipling-lpar"/>.
+    refer to the IBM documentation. Continue as described in <xref linkend="sec-prep-ipling-lpar"/>.
    </para>
   </sect3>
   <sect3 xml:id="sec-prep-prep-ipl-vm">
@@ -624,8 +610,7 @@ DASD=600"</screen>
      <title>Assigning Memory to z/VM guests</title>
      <para>
       When assigning memory to a z/VM guest, make sure that the memory size is
-      adequate for the preferred installation type. See <xref
-      linkend="sec-info-sysreq-sysreq-hw-mem"/>. To set the memory size to
+      adequate for the preferred installation type. See <xref linkend="sec-info-sysreq-sysreq-hw-mem"/>. To set the memory size to
       1&nbsp;GB, use the command <command>CP DEFINE STORAGE 1G</command>.
       After the installation has finished, reset the memory size to the desired
       value.
@@ -684,8 +669,7 @@ DIRM USER WITHPASS</screen>
 <screen>RECEIVE &lt;number&gt; USER DIRECT A (REPL)</screen>
     <para>
      You can now log in on the guest as user
-     <systemitem
-      class="username">LINUX1</systemitem>.
+     <systemitem class="username">LINUX1</systemitem>.
     </para>
     <para>
      If you do not have the <literal>dirmaint</literal> option available, refer
@@ -717,7 +701,7 @@ DIRM USER WITHPASS</screen>
     <para>
      This creates a qcow2 image with a size of 10 GB in
      <filename>/var/lib/libvirt/images/</filename>. For more information, refer
-     to <xref linkend="cha-qemu-guest-inst-qemu-img" />.
+     to <xref linkend="cha-qemu-guest-inst-qemu-img"/>.
     </para>
    </sect4>
    <sect4 xml:id="sec-prep-prep-ipl-kvm-domain">
@@ -731,44 +715,43 @@ DIRM USER WITHPASS</screen>
      <title>Example Domain XML File</title>
      <para>
       The following example creates a &vmguest; with a single CPU, 1 GB RAM,
-      and the virtual disk image created in the previous section (<xref
-      linkend="sec-prep-prep-ipl-kvm-disk"/>). It assumes that the virtual
+      and the virtual disk image created in the previous section (<xref linkend="sec-prep-prep-ipl-kvm-disk"/>). It assumes that the virtual
       server is attached to the host network interface
       <literal>bond0</literal>. Change the source devices element to match your
       network setup.
      </para>
-<screen><![CDATA[<domain type="kvm">
- <name>s15-1</name>
- <description>Guest-System SUSE SLES15</description>
- <memory>1048576</memory>
- <vcpu>1</vcpu>
- <os>
-  <type arch="s390x" machine="s390-ccw-virtio">hvm</type>
-  <!-- Boot kernel - remove 3 lines after successfull installation -->
-  <kernel>/var/lib/libvirt/images/s15-kernel.boot</kernel>
-  <initrd>/var/lib/libvirt/images/s15-initrd.boot</initrd>
-  <cmdline>linuxrcstderr=/dev/console</cmdline>
- </os>
- <iothreads>1</iothreads>
- <on_poweroff>destroy</on_poweroff>
- <on_reboot>restart</on_reboot>
- <on_crash>preserve</on_crash>
- <devices>
-  <emulator>/usr/bin/qemu-system-s390x</emulator>
-  <disk type="file" device="disk">
-   <driver name="qemu" type="qcow2" cache="none" iothread="1" io="native"/>
-   <source file="/var/lib/libvirt/images/s15lin_qcow2.img"/>
-   <target dev="vda" bus="virtio"/>
-  </disk>
-  <interface type="direct">
-   <source dev="bond0" mode="bridge"/>
-   <model type="virtio"/>
-  </interface>
-  <console type="pty">
-   <target type="sclp"/>
-  </console>
- </devices>
-</domain>]]></screen>
+<screen>&lt;domain type="kvm"&gt;
+ &lt;name&gt;s15-1&lt;/name&gt;
+ &lt;description&gt;Guest-System SUSE SLES15&lt;/description&gt;
+ &lt;memory&gt;1048576&lt;/memory&gt;
+ &lt;vcpu&gt;1&lt;/vcpu&gt;
+ &lt;os&gt;
+  &lt;type arch="s390x" machine="s390-ccw-virtio"&gt;hvm&lt;/type&gt;
+  &lt;!-- Boot kernel - remove 3 lines after successfull installation --&gt;
+  &lt;kernel&gt;/var/lib/libvirt/images/s15-kernel.boot&lt;/kernel&gt;
+  &lt;initrd&gt;/var/lib/libvirt/images/s15-initrd.boot&lt;/initrd&gt;
+  &lt;cmdline&gt;linuxrcstderr=/dev/console&lt;/cmdline&gt;
+ &lt;/os&gt;
+ &lt;iothreads&gt;1&lt;/iothreads&gt;
+ &lt;on_poweroff&gt;destroy&lt;/on_poweroff&gt;
+ &lt;on_reboot&gt;restart&lt;/on_reboot&gt;
+ &lt;on_crash&gt;preserve&lt;/on_crash&gt;
+ &lt;devices&gt;
+  &lt;emulator&gt;/usr/bin/qemu-system-s390x&lt;/emulator&gt;
+  &lt;disk type="file" device="disk"&gt;
+   &lt;driver name="qemu" type="qcow2" cache="none" iothread="1" io="native"/&gt;
+   &lt;source file="/var/lib/libvirt/images/s15lin_qcow2.img"/&gt;
+   &lt;target dev="vda" bus="virtio"/&gt;
+  &lt;/disk&gt;
+  &lt;interface type="direct"&gt;
+   &lt;source dev="bond0" mode="bridge"/&gt;
+   &lt;model type="virtio"/&gt;
+  &lt;/interface&gt;
+  &lt;console type="pty"&gt;
+   &lt;target type="sclp"/&gt;
+  &lt;/console&gt;
+ &lt;/devices&gt;
+&lt;/domain&gt;</screen>
     </example>
    </sect4>
   </sect3>
@@ -838,8 +821,7 @@ DIRM USER WITHPASS</screen>
     <para>
      The following example shows the required steps. This particular scenario
      assumes that the required files are accessible from an FTP server at the
-     IP address <literal>192.168.0.3</literal> and the login is <systemitem
-     class="username">lininst</systemitem>.
+     IP address <literal>192.168.0.3</literal> and the login is <systemitem class="username">lininst</systemitem>.
     </para>
     <example xml:id="ex-prep-ipling-vm-reader-ftp-ftptrans">
      <title>Transferring the Binaries via FTP</title>
@@ -921,8 +903,7 @@ SAY 'LOADING SLES12 FILES INTO READER...'
     </para>
     <para>
      To continue the installation, proceed to
-     <xref
-      linkend="sec-prep-netcfg"/>.
+     <xref linkend="sec-prep-netcfg"/>.
     </para>
    </sect4>
    <sect4 xml:id="sec-prep-ipling-vm-dvd">
@@ -939,8 +920,7 @@ SAY 'LOADING SLES12 FILES INTO READER...'
 <screen>IPL FC00</screen>
     <para>
      To continue the installation, proceed with
-     <xref
-      linkend="sec-prep-netcfg"/>.
+     <xref linkend="sec-prep-netcfg"/>.
     </para>
    </sect4>
    <sect4 xml:id="sec-prep-ipling-vm-zpxe">
@@ -954,8 +934,7 @@ SAY 'LOADING SLES12 FILES INTO READER...'
     <para>
      Log in as the z/VM Linux guest to IPL and transfer the script with a fixed
      size of 80 characters in ASCII mode (see
-     <xref
-      linkend="ex-prep-ipling-vm-reader-ftp-ftptrans"/> for an
+     <xref linkend="ex-prep-ipling-vm-reader-ftp-ftptrans"/> for an
      example). The <filename>zpxe.rexx</filename> script is available on the
      &leanos; DVD at <filename>/boot/s390x/zpxe.rexx</filename> or on
      a &slea; Cobbler server at
@@ -999,8 +978,7 @@ IPLDISK 600</screen>
      <callout arearefs="co-cobbler-sysedit-profile">
       <para>
        Name of an existing profile, see
-       <xref
-        linkend="sec-prep-makeavail-zpxe-cobbler-profile"/>.
+       <xref linkend="sec-prep-makeavail-zpxe-cobbler-profile"/>.
       </para>
      </callout>
     </calloutlist>
@@ -1096,8 +1074,7 @@ Retry?
    <filename>linuxrc</filename> main menu. Then choose <guimenu>Start
    Installation or Update</guimenu> to start the installation process. Select
    <guimenu>Network</guimenu> as the installation medium, then select the type
-   of network protocol to use for the installation. <xref
-   linkend="sec-prep-makeavail"/> describes how to make the installation data
+   of network protocol to use for the installation. <xref linkend="sec-prep-makeavail"/> describes how to make the installation data
    available for the various types of network connections.  Currently,
    <guimenu>FTP</guimenu>, <guimenu>HTTP</guimenu>, <guimenu>NFS</guimenu>, and
    <guimenu>SMB/CIFS</guimenu> (Windows file sharing) are supported.
@@ -1391,8 +1368,7 @@ ter '+++' to abort).
     <literal>&exampleclient;</literal> via SSH, use the <command>ssh -X
     &exampleclient;</command> command. If your workstation runs on Microsoft Windows,
     use the Putty tool available from
-    <link
-     xlink:href="http://www.chiark.greenend.org.uk/~sgtatham/putty/"/>.
+    <link xlink:href="http://www.chiark.greenend.org.uk/~sgtatham/putty/"/>.
     Set <guimenu>Enable X11 forwarding</guimenu> in Putty under <menuchoice>
     <guimenu>Connection</guimenu> <guimenu>SSH</guimenu> <guimenu>X11</guimenu>
     </menuchoice>.
@@ -1442,8 +1418,7 @@ QT_XCB_GL_INTEGRATION=none yast2 disk</screen>
        </itemizedlist>
      </important>
    <para>
-    Proceed with the installation procedure as described in <xref
-    linkend="cha-install"/>.
+    Proceed with the installation procedure as described in <xref linkend="cha-install"/>.
    </para>
   </sect3>
  </sect2>

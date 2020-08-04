@@ -4,37 +4,35 @@
 <!ENTITY % entities SYSTEM "entity-decl.ent">
 %entities;
 ]>
-
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude"
  xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="art-jeos-quickstart"
  xml:lang="en">
 
  <info>
-  <title>&jeos; Quick Start Guide</title>
-  <productname>&sls; JeOS</productname>
-  <productnumber>&productnumber;</productnumber>
-
-  <date><?dbtimestamp format="B d, Y"?></date>
-
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker>
-    <dm:url>https://bugzilla.suse.com/enter_bug.cgi</dm:url>
-    <dm:component>Documentation</dm:component>
-    <dm:product>SUSE Linux Enterprise Server 15 SP2</dm:product>
-    <dm:assignee>dpopov@suse.com</dm:assignee>
-   </dm:bugtracker>
-   <dm:editurl>https://github.com/SUSE/doc-sle/edit/maintenance/SLE15SP2/xml/</dm:editurl>
-   <dm:translation>no</dm:translation>
-  </dm:docmanager>
-  <abstract>
-   <para>
+      <title>&jeos; Quick Start Guide</title>
+      <productname>&sls; JeOS</productname>
+      <productnumber>&productnumber;</productnumber>
+      <date>
+        <?dbtimestamp format="B d, Y"?>
+      </date>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker>
+          <dm:url>https://bugzilla.suse.com/enter_bug.cgi</dm:url>
+          <dm:component>Documentation</dm:component>
+          <dm:product>SUSE Linux Enterprise Server 15 SP2</dm:product>
+          <dm:assignee>dpopov@suse.com</dm:assignee>
+        </dm:bugtracker>
+        <dm:editurl>https://github.com/SUSE/doc-sle/edit/maintenance/SLE15SP2/xml/</dm:editurl>
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+      <abstract>
+        <para>
     The following document provides an overview of &sls;
     &jeos; and describes the setup procedure.
    </para>
-  </abstract>
- </info>
-
- <sect1 xml:id="sec-introduction">
+      </abstract>
+    </info>
+    <sect1 xml:id="sec-introduction">
   <title>Introduction</title>
 
   <para>
@@ -94,8 +92,7 @@
    <title>System Requirements</title>
    <para>
     The minimum &jeos; system
-   requirements are similar to &sls;. For more information, refer to <xref
-   linkend="sec-x86-requirements"/>.
+   requirements are similar to &sls;. For more information, refer to <xref linkend="sec-x86-requirements"/>.
    </para>
   </sect2>
   <sect2 xml:id="sec-jeos-sles-diff">
@@ -180,8 +177,7 @@
      </para>
      <para>
       The &kiwi; configuration files used to create the official &jeos; images
-      are available from the openSUSE Build Service at <link
-      xlink:href="https://build.opensuse.org/package/view_file/SUSE:SLE-15-SP1:GA/kiwi-templates-SLES15-&jeos;/&jeos;.kiwi?expand=1">https://build.opensuse.org/</link>.
+      are available from the openSUSE Build Service at <link xlink:href="https://build.opensuse.org/package/view_file/SUSE:SLE-15-SP1:GA/kiwi-templates-SLES15-&jeos;/&jeos;.kiwi?expand=1">https://build.opensuse.org/</link>.
      </para>
      <note>
       <title>Specific Host Tools Packages</title>
@@ -343,8 +339,7 @@
     experiment with &jeos; safely.
   </para>
   <para>
-    Download a 60-day trial &jeos; image for &kvm; at <link xlink:href=
-    "https://www.suse.com/products/server/jeos/"></link>.
+    Download a 60-day trial &jeos; image for &kvm; at <link xlink:href="https://www.suse.com/products/server/jeos/"/>.
   </para>
   <para>
     Refer to the following procedure to create a &jeos; virtual machine in &kvm;.

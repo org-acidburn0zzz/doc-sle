@@ -35,6 +35,7 @@
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
         <dm:bugtracker>
           </dm:bugtracker>
+        <dm:translation>yes</dm:translation>
       </dm:docmanager>
     </info>
     <!--
@@ -73,8 +74,7 @@
   <title>Installation and Requirements</title>
 
   <para>
-   To use &oprof;, install the <systemitem
-   class="resource">oprofile</systemitem> package.<phrase os="sles;sled">
+   To use &oprof;, install the <systemitem class="resource">oprofile</systemitem> package.<phrase os="sles;sled">
    &oprof; works on &x86-64;, &zseries;, and &power; processors.</phrase>
   </para>
 

@@ -4,7 +4,6 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <sect1 version="5.0" xml:id="sec-yast-hw-scan"
   xmlns="http://docbook.org/ns/docbook"
   xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -14,11 +13,10 @@
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
         <dm:bugtracker>
         </dm:bugtracker>
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
       </dm:docmanager>
     </info>
-
- <para>
+    <para>
   You can configure a USB or SCSI scanner with &yast;. The
   <systemitem class="resource">sane-backends</systemitem> package contains
   hardware drivers and other essentials needed to use a scanner. If you own

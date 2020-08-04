@@ -4,7 +4,6 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <sect1 version="5.0" xml:id="sec-expert-partitioner"
   xmlns="http://docbook.org/ns/docbook"
   xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -12,13 +11,12 @@
  <title>Using the Expert Partitioner</title>
 
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker></dm:bugtracker>
-   <dm:translation>yes</dm:translation>
-  </dm:docmanager>
- </info>
-
- <para>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker/>
+        <dm:translation>no</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
   With the Expert Partitioner, shown in
   <xref linkend="fig-expert-partitioner-overview"/>, manually modify the partitioning
   of one or several hard disks. You can add, delete, resize, and edit

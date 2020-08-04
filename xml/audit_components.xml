@@ -61,6 +61,7 @@
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
         <dm:bugtracker>
           </dm:bugtracker>
+        <dm:translation>yes</dm:translation>
       </dm:docmanager>
     </info>
     <para>
@@ -704,8 +705,7 @@ cp_client_max_idle = 0</screen>
       <literal>syslog</literal>, <literal>rotate</literal>,
       <literal>exec</literal>, <literal>suspend</literal>,
       <literal>single</literal>, and <literal>halt</literal>. For an
-      explanation of these values refer to <xref
-      linkend="var-audit-auditd-space-left"/>.
+      explanation of these values refer to <xref linkend="var-audit-auditd-space-left"/>.
      </para>
      <note>
       <title>CAPP Environment</title>

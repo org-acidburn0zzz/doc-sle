@@ -10,29 +10,19 @@
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Installation on IBM &power;</title>
  <info>
+  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+   <dm:bugtracker/>
+   <dm:translation>no</dm:translation>
+  </dm:docmanager>
   <abstract>
    <para>
     This chapter describes the installation procedure of &productname; on IBM
     &power; systems.
    </para>
   </abstract>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker></dm:bugtracker>
-   <dm:translation>yes</dm:translation>
-  </dm:docmanager>
  </info>
- <sect1 version="5.0" xml:id="sec-power-requirements"
- xmlns="http://docbook.org/ns/docbook"
- xmlns:xi="http://www.w3.org/2001/XInclude"
- xmlns:xlink="http://www.w3.org/1999/xlink">
+ <sect1 xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="sec-power-requirements">
   <title>Hardware Requirements</title>
-
-  <info>
-   <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-    <dm:bugtracker></dm:bugtracker>
-    <dm:translation>yes</dm:translation>
-   </dm:docmanager>
-  </info>
 
   <para>
    To run &sls; on &power;, your hardware must meet the minimum requirements
@@ -50,8 +40,7 @@
       &productname; may support additional IBM &power; systems that are not
       listed. For the latest information, refer to the IBM Information Center
       for Linux at
-      <link 
-       xlink:href="https://www.ibm.com/support/knowledgecenter/linuxonibm/liaam/liaamdistros.htm"/>.
+      <link xlink:href="https://www.ibm.com/support/knowledgecenter/linuxonibm/liaam/liaamdistros.htm"/>.
      </para>
     </listitem>
    </varlistentry>
@@ -178,17 +167,13 @@
 
   <para>
    Before installing &productname;, make sure that the server has the latest
-   firmware. For the latest firmware, visit IBM FixCentral: <link xlink:href=
-   "http://www.ibm.com/support/fixcentral/"/>. Select your system from the
+   firmware. For the latest firmware, visit IBM FixCentral: <link xlink:href="http://www.ibm.com/support/fixcentral/"/>. Select your system from the
    Product Group list. Additional software is available from the IBM
    &powerlinux; Tools Repository. For more information on using the IBM
    &powerlinux; Tools Repository, see <link xlink:href="https://ibm.biz/Bdxn3N"/>.
   </para>
  </sect1>
- <sect1 version="5.0" xml:id="sec-power-install"
-       xmlns="http://docbook.org/ns/docbook"
-       xmlns:xi="http://www.w3.org/2001/XInclude"
-       xmlns:xlink="http://www.w3.org/1999/xlink">
+ <sect1 xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="sec-power-install">
   <title>Installing &sls; for &power;</title>
 
   <para>
@@ -354,10 +339,7 @@
    </step>
   </procedure>
  </sect1>
- <sect1 version="5.0" xml:id="sec-power-install-procedure"
-       xmlns="http://docbook.org/ns/docbook"
-       xmlns:xi="http://www.w3.org/2001/XInclude"
-       xmlns:xlink="http://www.w3.org/1999/xlink">
+ <sect1 xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="sec-power-install-procedure">
   <title>Installing &sls;</title>
 
   <para>
@@ -483,10 +465,7 @@
    </step>
   </procedure>
  </sect1>
- <sect1 version="5.0" xml:id="sec-power-info"
-       xmlns="http://docbook.org/ns/docbook"
-       xmlns:xi="http://www.w3.org/2001/XInclude"
-       xmlns:xlink="http://www.w3.org/1999/xlink">
+ <sect1 xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="sec-power-info">
   <title>Further Information</title>
 
   <para>
@@ -497,8 +476,7 @@
    <listitem>
     <para>
      The SUSE Support Knowledge Base at
-     <link
-	xlink:href="https://www.suse.com/support/kb/"/> is a help tool for
+     <link xlink:href="https://www.suse.com/support/kb/"/> is a help tool for
      assisting customers in solving problems. Search the knowledge base on
      &productname; using relevant search terms.
     </para>
@@ -529,8 +507,7 @@
     <para>
      In case of hardware errors, check the control panel for any codes. You can
      look up codes at the IBM Power Systems Hardware Information Center at
-     <link
-	xlink:href="https://ibm.biz/Bdxn3T"/>.
+     <link xlink:href="https://ibm.biz/Bdxn3T"/>.
     </para>
    </listitem>
    <listitem>

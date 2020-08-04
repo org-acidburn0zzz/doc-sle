@@ -12,12 +12,12 @@
   xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Changing Language and Country Settings with &yast;</title>
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker></dm:bugtracker>
-   <dm:translation>yes</dm:translation>
-  </dm:docmanager>
- </info>
- <para>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker/>
+        <dm:translation>no</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
   Working in different countries or having to work in a multilingual
   environment requires your computer to be set up to support this.
   &productnamereg; can handle different <literal>locales</literal> in parallel.
@@ -146,8 +146,7 @@
     <title>Installing Additional Languages</title>
     <para>
      When installing additional languages, &yast; also allows you to
-     set different locale settings for the user &rootuser;, see <xref
-     linkend="st-yast-lang-additional-root"/>. The option
+     set different locale settings for the user &rootuser;, see <xref linkend="st-yast-lang-additional-root"/>. The option
      <guimenu>Locale Settings for User root</guimenu> determines how
      the locale variables (<envar>LC_*</envar>) in the file
      <filename>/etc/sysconfig/language</filename> are set for
@@ -183,8 +182,7 @@
        <guimenu>Hardware</guimenu> <guimenu>System Keyboard Layout</guimenu>
        </menuchoice> or <menuchoice> <guimenu>System</guimenu> <guimenu>Date
        and Time</guimenu> </menuchoice> in &yast; to start the respective
-       dialogs. For more information, refer to <xref
-       linkend="sec-yast-hw-keym"/> and <xref linkend="sec-yast-country"/>.
+       dialogs. For more information, refer to <xref linkend="sec-yast-hw-keym"/> and <xref linkend="sec-yast-country"/>.
       </para>
      </tip>
     </step>

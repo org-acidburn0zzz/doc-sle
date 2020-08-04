@@ -4,7 +4,6 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <sect1 version="5.0" xml:id="Configuration-Security-users-and-groups"
   xmlns="http://docbook.org/ns/docbook"
   xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -12,13 +11,12 @@
   <title>Users and Groups</title>
 
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:bugtracker></dm:bugtracker>
-   <dm:translation>yes</dm:translation>
-  </dm:docmanager>
- </info>
-
-<sect2 xml:id="Configuration-Security-users">
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:bugtracker/>
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <sect2 xml:id="Configuration-Security-users">
     <title>Users</title>
 
     <para>
@@ -115,8 +113,7 @@
      </para>
      <para>
       User IDs should be unique throughout the system. If not, some
-      applications such as the login manager <systemitem
-      class="resource">gdm</systemitem> may no longer work as expected.
+      applications such as the login manager <systemitem class="resource">gdm</systemitem> may no longer work as expected.
      </para>
      <para>
       When adding users with the &ay; control file, it is strongly recommended
@@ -238,8 +235,7 @@
          <para>
           Optional. User ID. It should be a unique and must be a non-negative
           number. If not specified, &ay; will automatically choose a user
-          ID. Also refer to <xref
-          linkend="ann-Configuration-Security-users-uid"/> for additional
+          ID. Also refer to <xref linkend="ann-Configuration-Security-users-uid"/> for additional
           information.
          </para>
         </entry>
@@ -780,8 +776,8 @@
     <example>
      <title>Enabling autologin and password-less login</title>
      <screen>&lt;login_settings&gt;
-  &lt;autologin_user&gt;vagrant&lt;/autologin_user>
-  &lt;password_less_login config:type="boolean"&gt;true&lt;/password_less_login>
+  &lt;autologin_user&gt;vagrant&lt;/autologin_user&gt;
+  &lt;password_less_login config:type="boolean"&gt;true&lt;/password_less_login&gt;
 &lt;/login_settings&gt;</screen>
     </example>
 
@@ -847,4 +843,4 @@
      </tgroup>
     </informaltable>
    </sect2>
-  </sect1>   
+  </sect1>
